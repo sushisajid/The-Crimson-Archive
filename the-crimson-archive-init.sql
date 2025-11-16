@@ -214,3 +214,71 @@ SELECT conname AS constraint_name,
        confrelid::regclass AS table_to
 FROM pg_constraint
 WHERE contype = 'f';
+
+-- functions & triggers
+
+-- StoryArcs - enforce arcOrder sequence
+
+create or replace function enforce_arc_order()
+returns trigger as $$
+begin
+  -- shift existing arcs if arcOrder conflicts
+  update StoryArcs
+  set arcOrder = arcOrder + 1
+  where gameID = NEW.gameID
+    and arcOrder >= NEW.arcOrder;
+
+  return new;
+end;
+$$ language plpgsql;
+
+create trigger trg_enforce_arc_order
+before insert on StoryArcs
+for each row
+execute function enforce_arc_order();
+
+-- Ratings – prevent duplicate ratings
+
+create or replace function prevent_duplicate_ratings()
+returns trigger as $$
+begin
+  if exists (
+    select 1
+    from Ratings
+    where gameID = NEW.gameID
+      and userID = NEW.userID
+  ) then
+    raise exception 'User % has already rated game %', NEW.userID, NEW.gameID;
+  end if;
+  return new;
+end;
+$$ language plpgsql;
+
+create trigger trg_prevent_duplicate_ratings
+before insert on Ratings
+for each row
+execute function prevent_duplicate_ratings();
+
+-- Games_Contributors – maintaining uniqueness
+
+create or replace function prevent_duplicate_contributors()
+returns trigger as $$
+begin
+  if exists (
+    select 1
+    from Games_Contributors
+    where gameID = NEW.gameID
+      and contributorID = NEW.contributorID
+      and roleID = NEW.roleID
+  ) then
+    raise exception 'Contributor % with role % already assigned to game %',
+        NEW.contributorID, NEW.roleID, NEW.gameID;
+  end if;
+  return new;
+end;
+$$ language plpgsql;
+
+create trigger trg_prevent_duplicate_contributors
+before insert on Games_Contributors
+for each row
+execute function prevent_duplicate_contributors();
