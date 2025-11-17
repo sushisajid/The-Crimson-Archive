@@ -7,16 +7,19 @@ set search_path to crimson;
 
 -- idependent root tables (games + users)
 
-Create Table Games (
+create table Games (
 	gameID serial primary key, -- serial ki waja se auto increment hoga
+	gameCoverURL varchar(2083),
+	gameLogoURL varchar(2083),
 	title varchar(100) not null,
+	plotSummary text,
 	releaseDate date not null,
 	multiplayerSupport boolean not null
 );
 
 -- users
 
-Create table Users(
+create table Users(
 	userID serial primary key,
 	username varchar(100) unique not null,
 	displayName varchar(100),
@@ -27,12 +30,12 @@ Create table Users(
 
 -- platforms
 
-Create Table Platforms (
+create table Platforms (
 	platformID serial primary key,
 	platformName varchar(50) unique not null
 );
 
-Create Table Games_Platforms( -- junction table b/w game and platforms
+create table Games_Platforms( -- junction table b/w game and platforms
 	gamePlatformID serial primary key,
 	gameID int not null,
 	platformID int not null,
@@ -43,15 +46,18 @@ Create Table Games_Platforms( -- junction table b/w game and platforms
 
 -- characters
 
-Create table InGameCharacters( -- renamed Character table from ERD to InGameCharacters b/c Characters cannot be an entity name
+create table InGameCharacters( -- renamed Character table from ERD to InGameCharacters b/c Characters cannot be an entity name
 	characterID serial primary key,
 	characterName varchar(100) not null,
 	backstory text,
 	description text,
+	englishVA varchar(100),
+	japaneseVA varchar(100),
+	motionCapture varchar(100),
 	spriteURL varchar(2083)
 );
 
-Create table Games_Characters(
+create table Games_Characters(
 	gameCharID serial primary key,
 	gameID int not null,
 	characterID int not null,
@@ -62,7 +68,7 @@ Create table Games_Characters(
 
 -- appearances
 
-Create table Appearances(
+create table Appearances(
 	appearanceID serial primary key,
 	gameID int not null,
 	characterID int not null,
@@ -76,7 +82,7 @@ Create table Appearances(
 
 -- maps / mobs
 
-Create table Maps(
+create table Maps(
 	mapID serial primary key,
 	gameID int not null,
 	mapName varchar(100) not null,
@@ -86,7 +92,7 @@ Create table Maps(
 	foreign key(gameID) references Games(gameID) on delete cascade
 );
 
-Create table Mobs(
+create table Mobs(
 	mobID serial primary key,
 	gameID int not null,
 	mobName varchar(100) not null,
@@ -99,7 +105,7 @@ Create table Mobs(
 	foreign key(gameID) references Games(gameID) on delete cascade
 );
 
-Create table Mob_Maps(
+create table Mob_Maps(
 	mmID serial primary key,
 	mobID int not null,
 	mapID int not null,
@@ -113,7 +119,7 @@ Create table Mob_Maps(
 -- all self-referencing FKs are nullable!
 -- prevArcID and nextArcID are optional for navigation BUT nullable
 
-Create table StoryArcs(
+create table StoryArcs(
 	storyArcID serial primary key,
 	gameID int not null,
 	-- dropping these two cols since we can make do with just arcOrder to point in sequence
@@ -139,20 +145,20 @@ Create table StoryArcs(
 
 -- roles
 
-Create table Roles(
+create table Roles(
 	roleID serial primary key,
 	roleName varchar(50) unique not null -- b/c having 2 roles both called 'writer' would make no sense
 );
 
 -- contributors
 
-Create Table Contributors(
+create table Contributors(
 	contributorID serial primary key,
 	contributorName varchar(100) unique not null,
 	specialization varchar(100)
 );
 
-Create table Games_Contributors(
+create table Games_Contributors(
 	gcID serial primary key,
 	gameID int not null,
 	contributorID int not null,
@@ -167,7 +173,7 @@ Create table Games_Contributors(
 
 -- clips
 
-Create table Clips(
+create table Clips(
 	clipID serial primary key,
 	gameID int not null,
 	clipTitle varchar(100) not null,
@@ -179,7 +185,7 @@ Create table Clips(
 
 -- ratings
 
-Create table Ratings(
+create table Ratings(
 	ratingID serial primary key,
 	gameID int not null,
 	userID int not null,
@@ -204,8 +210,7 @@ commit;
 -- verify schema existence
 SELECT table_name
 FROM information_schema.tables
-WHERE table_schema = 'public'  -- or your schema name
-  AND table_type = 'BASE TABLE'
+WHERE table_schema = 'crimson'
 ORDER BY table_name;
 
 -- see all foreign keys
@@ -222,13 +227,12 @@ WHERE contype = 'f';
 create or replace function enforce_arc_order()
 returns trigger as $$
 begin
-  -- shift existing arcs if arcOrder conflicts
-  update StoryArcs
-  set arcOrder = arcOrder + 1
-  where gameID = NEW.gameID
+  	-- shift existing arcs if arcOrder conflicts
+  	update StoryArcs
+  	set arcOrder = arcOrder + 1
+  	where gameID = NEW.gameID
     and arcOrder >= NEW.arcOrder;
-
-  return new;
+	return new;
 end;
 $$ language plpgsql;
 
@@ -242,15 +246,15 @@ execute function enforce_arc_order();
 create or replace function prevent_duplicate_ratings()
 returns trigger as $$
 begin
-  if exists (
-    select 1
-    from Ratings
-    where gameID = NEW.gameID
-      and userID = NEW.userID
-  ) then
-    raise exception 'User % has already rated game %', NEW.userID, NEW.gameID;
-  end if;
-  return new;
+	if exists (
+		select 1
+    	from Ratings
+    	where gameID = NEW.gameID
+      	and userID = NEW.userID
+  	) then
+	  	raise exception 'User % has already rated game %', NEW.userID, NEW.gameID;
+  	end if;
+  	return new;
 end;
 $$ language plpgsql;
 
@@ -264,17 +268,17 @@ execute function prevent_duplicate_ratings();
 create or replace function prevent_duplicate_contributors()
 returns trigger as $$
 begin
-  if exists (
-    select 1
-    from Games_Contributors
-    where gameID = NEW.gameID
-      and contributorID = NEW.contributorID
-      and roleID = NEW.roleID
-  ) then
-    raise exception 'Contributor % with role % already assigned to game %',
+	if exists (
+    	select 1
+    	from Games_Contributors
+    	where gameID = NEW.gameID
+      		and contributorID = NEW.contributorID
+      		and roleID = NEW.roleID
+  	) then
+    	raise exception 'Contributor % with role % already assigned to game %',
         NEW.contributorID, NEW.roleID, NEW.gameID;
-  end if;
-  return new;
+  	end if;
+  	return new;
 end;
 $$ language plpgsql;
 
