@@ -298,3 +298,18 @@ insert into Games_Characters (gameID, characterID) values
 select characterID, characterName from InGameCharacters;
 
 -- mobs and maps
+-- ref: https://www.evilresource.com/resident-evil-7/maps
+
+-- guest house maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Guest House', '1F', 'first floor of the guest house in the baker estate, includes main living area, dining, and hallway.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_1f.jpeg'),
+(1, 'Guest House', '2F', 'second floor of the guest house, includes bedrooms and bathroom.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_2f.png'),
+(1, 'Guest House', '3F', 'third floor of the guest house, attic storage and additional rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_3f.png'),
+(1, 'Guest House', 'B1', 'basement of the guest house, storage and access to hidden areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_b1.png');
+
+-- main house maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Main House', '1F', 'first floor of the main house, includes kitchen, living room, and foyer.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_1f.png'),
+(1, 'Main House', '2F', 'second floor of the main house, bedrooms and study areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_2f.png'),
+(1, 'Main House', 'Attic', 'attic of the main house, storage area with hidden secrets.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_attic.png'),
+(1, 'Main House', 'Processing Area', 'processing area of the main house, contains Eveline containment and lab equipment.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_processingArea.png');

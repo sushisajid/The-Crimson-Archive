@@ -86,7 +86,7 @@ create table Maps(
 	mapID serial primary key,
 	gameID int not null,
 	mapName varchar(100) not null,
-	floorName varchar(50), -- e.g. F1, B3 etc.
+	floorName varchar(50), -- e.g. 1F, 3B etc.
 	description text not null,
 	mapURL varchar(2083),
 
