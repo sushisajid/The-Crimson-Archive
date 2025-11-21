@@ -397,3 +397,42 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 'appears in guest house attic for final confrontation; appears earlier as hallucinations, mold constructs, minions; creates environmental and mental hazards.');
 
 select * from Mobs;
+
+-- Molded (appears in multiple floors: Guest House 1F, 2F, 3F, Main House Processing Area)
+insert into Mob_Maps (mobID, mapID) values
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 8);
+
+-- Blade Molded (Main House Processing Area, maybe also old house if you track it)
+insert into Mob_Maps (mobID, mapID) values
+(2, 8);
+
+-- Quick Molded (Guest House 2F → path to dissection room / Old House hallway)
+insert into Mob_Maps (mobID, mapID) values
+(3, 2),
+(3, 6),
+(3, 8);
+
+-- Insect Hive (Old House, tied to Marguerite)
+insert into Mob_Maps (mobID, mapID) values
+(6, 6);
+
+-- Mia Winters (Infected) (Guest House 1F, 2F, Attic)
+insert into Mob_Maps (mobID, mapID) values
+(7, 1),
+(7, 2),
+(7, 3);
+
+-- Jack Baker (Infected)
+insert into Mob_Maps (mobID, mapID) values
+(8, 5),
+(8, 6);
+
+-- Marguerite Baker (Infected) (Greenhouse → Main House 2F)
+insert into Mob_Maps (mobID, mapID) values
+(9, 5);
+
+select * from mob_maps;
+
