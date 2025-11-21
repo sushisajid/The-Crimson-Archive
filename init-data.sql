@@ -321,7 +321,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Molded', 'standard',
 'tall, flexible humanoid bioweapons fully warped by black mold fungus. bodies are veiny, skeletal structures barely visible under the fungal mass. heads melted into a huge gaping mouth full of spike-like teeth. claws extend from arms, allowing slashing and long-range thrust attacks. animalistic but intelligent enough to track prey, hunt in groups, crawl through vents, and ambush from mold-covered environments. extremely durable exterior mold holds the body together — when pushed past its durability limit, the internal organs burst into sludge.',
 'general damage to the mold exterior — shredding the outer mold structure causes the internal organs to collapse instantly. arms and legs can be destroyed to cripple them. white molded/fumers are immune to normal bullets, explosives, and fire — weakness is anti-regen ramrod ammo only.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/molded_re7.webp',
 'created when corpses are consumed by mold through exposure to an E-Type subject; spawn throughout mold-rich environments. despawn when entering safe rooms, may respawn upon exit.');
 
 -- blade molded
@@ -329,31 +329,31 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Blade Molded', 'standard',
 'mutated molded variant with right arm transformed into massive cluster of organic spiked blades. shields head and strikes at long range. movement, intelligence, and aggression match regular molded but faster and relentless when crawling.',
 'headshots still work, require more firepower due to shield and higher health. shotgun blast to head can one-shot. crippling legs increases aggression.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/blade_molded_re7.webp',
 'first encountered in processing area (normal), old house (madhouse). natural evolution of molded infection; rarer than regular molded.');
 
 -- quick molded
 insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL, spawnNotes) values
 (1, 'Quick Molded', 'standard',
 'lean, smaller molded variant, runs and fights on all fours with extra-long limbs for speed and agility. cannot bite; offense from claw strikes.',
-'low durability — 2–3 handgun headshots or 1 shotgun blast. speed makes landing hits difficult. crouching improves aim.',
-NULL,
-'appears after Marguerite’s defeat en route to dissection room. Madhouse versions appear earlier; faster and more aggressive.');
+'low durability — 2 - 3 handgun headshots or 1 shotgun blast. speed makes landing hits difficult. crouching improves aim.',
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/quick_molded_re7.webp',
+'appears after Marguerite''s defeat en route to dissection room. Madhouse versions appear earlier; faster and more aggressive.');
 
 -- fat molded
 insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL, spawnNotes) values
 (1, 'Fat Molded', 'standard',
 'massive, bloated molded variant powered by corrosive bile. extremely slow, durable, vomit-based ranged attacks, grabs, charges, explodes on death.',
 'shotgun to legs slows it; remote bombs in mouth = instant kill; keep distance and use cover.',
-NULL,
-'first major encounter in barn; appears later in other locations including Mia’s sections. death explosion requires spacing.');
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/fat_molded_re7.webp',
+'first major encounter in barn; appears later in other locations including Mia''s sections. death explosion requires spacing.');
 
 -- man-eating spider
 insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL, spawnNotes) values
 (1, 'Man-Eating Spider', 'standard',
 'colonies of mold-generated spider imitations that nest on doors, cabinets, chokepoints. hyper-aggressive jump attackers with strong fangs; behave like living locks.',
 'very low hp; knife and burner kill instantly. must eliminate full cluster to open blocked paths.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/spider_re7.webp',
 'found only in Old House before Marguerite. spawn in groups; despawn permanently after area completion.');
 
 -- insect hive
@@ -361,7 +361,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Insect Hive', 'standard',
 'stationary mold-grown hives that release swarms of man-eating insects when disturbed. danger is in swarms and blocking progression.',
 'fire deletes them (burner/grenade), shotguns effective but insects may body-block. destroying small hives during Marguerite fight stops additional swarms.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/hive_re7.jpg',
 'first appear in Old House; one must be destroyed to reach Cellar. additional hives spawn dynamically during Marguerite fight.');
 
 -- boss: Mia Winters (infected)
@@ -369,7 +369,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Mia Winters (Infected)', 'boss',
 'violent corrupted puppet of Eveline, flips between loving wife and rabid bio-weapon. superhuman strength, speed, and resistance to pain.',
 'standard weapons stagger; openings during post-rage cooldowns; melee works first encounter; chainsaw phase requires distance and shots.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/mia_infected_re7.webp',
 'triggered after Ethan leaves Mia alone in guest house. includes stair ambush, wall throw + axe, attic power return → chainsaw phase. ends when defeated, mutters "I love you".');
 
 -- boss: Jack Baker (infected)
@@ -377,7 +377,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Jack Baker (Infected)', 'boss',
 'heavily mutated Jack Baker, reptilian mass of molded flesh with multiple eyes. extremely strong, highly aggressive, can throw player.',
 'destroying eyes deals high damage and staggers; cannot be killed normally; only serum works.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/jack_re7.webp',
 'appears in boathouse during escape with Mia and Zoe. fight ends when immobilized and injected with serum.');
 
 -- boss: Marguerite Baker (infected)
@@ -385,7 +385,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Marguerite Baker (Infected)', 'boss',
 'fully mutated by Eveline, elongated limbs, demonic eyes, crawls along walls. abdomen is insect hive releasing swarms. fast, strong, highly aggressive.',
 'primary weak point is abdomen hive; vulnerable to fire and concentrated attacks on limbs/abdomen; high-damage weapons recommended.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/marguerite_infected_re7.webp',
 'appears in greenhouse for final confrontation; stalks Ethan in Old House. fight triggers automatically with lantern.');
 
 -- boss: Eveline
@@ -393,7 +393,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Eveline', 'boss',
 'bioweapon child with mold-based powers, capable of hallucinations, telekinesis, and mind control. can manipulate mold, summon minions, attack from distance. transforms into massive mold monstrosity when weakened.',
 'e-necrotoxin incapacitates powers and triggers physical target form; heavy firepower, explosives, ramrods effective on limbs/weak points.',
-NULL,
+'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/eviler_eveline_re7.png',
 'appears in guest house attic for final confrontation; appears earlier as hallucinations, mold constructs, minions; creates environmental and mental hazards.');
 
 select * from Mobs;
