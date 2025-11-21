@@ -437,6 +437,7 @@ insert into Mob_Maps (mobID, mapID) values
 select * from mob_maps;
 
 -- storyArcs
+-- ref: https://www.ign.com/wikis/resident-evil-7/Walkthrough
 
 insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
 values
