@@ -436,3 +436,92 @@ insert into Mob_Maps (mobID, mapID) values
 
 select * from mob_maps;
 
+-- storyArcs
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values
+(
+    1,
+    'Guest House',
+    1,
+    'Ethan begins his search for Mia in the Baker estate, exploring the abandoned Guest House and uncovering clues from previous visitors, VHS tapes, and hidden rooms.',
+    'Starting the game, Ethan drives down the Louisiana bayou roads until his car stops. He explores the estate and follows clues leading to Mia. The journey includes investigating the Guest House exterior, discovering backyards, smouldering ruins, and hidden messages. Inside the Guest House, Ethan navigates creepy hallways, locked cabinets, disgusting kitchens, and first-floor living rooms. He finds photos, VHS tapes (Derelict House Footage), and collectibles that reveal past events. Progression continues through the basement, secret compartments, and ladders to uncover Mia. Encounters include hidden dangers, attacks, and environmental hazards. The arc culminates in a confrontation in the attic, where Ethan battles a chainsaw-wielding foe before moving on to the main Baker House.',
+    true
+);
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values 
+(
+    1,
+    'Main House',
+    2, -- second major area after Guest House
+    'Ethan wakes up in the Baker family home, escapes a gruesome feast, navigates the Main House, solves emblem puzzles, collects items, and battles Jack to secure the last Dog Head Emblem.',
+    'Ethan finds himself strapped to a chair alongside sleeping Grandma. He breaks free and explores the Dining Area and Kitchen, collecting herbs, ammo, and files. He navigates long hallways, chases by Jack, and finds a hidden passage under the floor to the Laundry Room. After using the Lockpick and Ox Statuette to access the Main Hall, Ethan collects the first two Dog Head Emblems. In Mia''s Tape interactive segment, he sneaks past Marguerite and solves a spider-shaped shadow puzzle to reach the Drawing Room. He gathers more items, including Psychostimulants, Gunpowder, and the last Dog Head Emblem from the Bathroom. Finally, Ethan battles Jack in the Morgue using strategic movement, body bags, and a chainsaw to end the confrontation.',
+    true
+);
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values 
+(
+    1,
+    'Old House',
+    3, -- third major area after Main House
+    'Ethan explores the Old House to locate the serum, collects key items, battles insect swarms and Marguerite, unlocks the Altar Room, and retrieves the D-Series Arm.',
+    'With Jack defeated, Ethan freely explores the yard, collecting Lockpick, Herbs, Gunpowder, Antique Coins, and a Repair Kit. He enters Zoe''s trailer, gathers the Broken Handgun and Investigation Notes (File #14), and learns of his mission to retrieve the serum. Following Mia''s tape path, he navigates the Guest Room and Gallery, finds and assembles the Burner, and clears insect nests in the Living Room and cellar. On the second floor, he uses the Crow Key to unlock the Supplies Room in the Main House for a Grenade Launcher. Ethan confronts Marguerite, using the Burner, Shotgun, and Grenade Launcher to defeat her, then unlocks the Altar Room to read the Serum Documentation (File #16). He collects the D-Series Peripheral Nerve and Lantern, navigates the Kid''s Room and Detention Room, retrieves the D-Series Arm, fights Molded enemies, and prepares for Lucas Baker''s next game in the Main House (File #18).',
+    true
+);
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values 
+(
+    1,
+    'Testing Area',
+    4, -- fourth major area after Old House
+    'Ethan returns to the Main House to retrieve keycards, solve Lucas’ puzzles, navigate tripwires, confront new Molded enemies, survive the party room, and obtain the D-Series Head.',
+    'Ethan revisits the Main House, collecting Handgun Ammo, Herbs, Shotgun Shells, Lockpicks, and Backpack upgrades. Using the Snake Key, he accesses hidden areas and retrieves Red and Blue Keycards. Lucas'' twisted birthday puzzles challenge him to use the Candle, Winding Key, Quill Pen, and Straw Doll to unlock cabinets, obtain the Valve Handle, and light the cake. Ethan enters the Testing Area, solves shadow puzzles for a Stabilizer, and navigates tripwires and explosive crates while collecting Ammo, Herbs, Gunpowder, and Antique Coins. He survives ambushes by 4-legged Molded, explores the Barn to obtain Mr. Everywhere Bobblehead #13, clears safe rooms, and defeats a massive Fat Molded summoned by Lucas. Finally, Ethan enters the Party Room, solves the password puzzle, disables traps, and retrieves the D-Series Head, with a new Safe Room and storage box allowing him to recover all collected items.',
+    true
+);
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values 
+(
+    1,
+    'Boathouse',
+    5, -- fifth major area after Testing Area
+    'Ethan navigates the Boathouse, rescues Zoe and Mia, collects weapons and items, survives multiple Molded attacks, and defeats Mutated Jack using strategy and explosives.',
+    'Ethan leaves the Storage with the D-Series parts but takes the Crank, collecting Shotgun Shells, Handgun Ammo, Chem Fluid, 44 Magnum Ammo, and Mr. Everywhere Bobbleheads #14 and #15 along the way. He uses pulleys to access new walkways while dodging 4-legged Molded and other enemies. The first room is a Safe Room, allowing Ethan to stock up on Herbs, Ammo, Psychostimulants, Chem Fluid, Strong Chem Fluid, Separating Agent, and Flame Rounds. After crafting and preparing gear, Ethan retrieves the D-Series Arm and Head, then proceeds upstairs to rescue Mia and Zoe. Mutated Jack attacks in an arena with narrow walkways and large holes; Ethan targets glowing eyes across his body, using pistols, shotguns, grenade launchers, and careful positioning to defeat him. Following the battle, Ethan and Zoe escape, using a serum on Jack for the final takedown, while a choice determines who receives the last Serum, affecting one of two minor endings.',
+    true
+);
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values 
+(
+    1,
+    'Wrecked Ship',
+    6, -- sixth major area after Boathouse
+    'Mia navigates the Wrecked Ship to find Ethan, dealing with Molded enemies and environmental hazards while uncovering the ship''s dark past and tracking Eveline.',
+    'After a cutscene, Mia wakes up with only a Strange Bottle marked "E-001" and starts investigating the ship to find Ethan. She traverses dark, narrow corridors, flooded rooms, and blocked stairwells, discovering Antique Coins #15-18, Mr. Everywhere Bobblehead #16-17, and supplies including Herbs, Chem Fluid, Machine Gun Ammo, Remote Bombs, Strong Chem Fluid, Corrosives, and a Survival Knife. Mia interacts with past events via an Old Videotape, regaining health monitoring equipment and weapons. She navigates around multiple patrolling 4-legged and Fat Molded, uses Remote Bombs and Corrosives to unlock doors and eliminate enemies, retrieves the missing Fuse and Power Cable for the elevator, and climbs through different floors including the Bridge, Control Room, Sick Bay, Crew Quarters, and Engine Rooms. The journey ends with Mia confronting Eveline, collecting critical documents and files, and finally locating Ethan in the lower levels, fully equipping herself for upcoming battles.',
+    true
+);
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values
+(
+    1,
+    'Salt Mines',
+    7, -- seventh major area after Wrecked Ship
+    'Ethan navigates the Salt Mines to track down Eveline, battling Molded enemies, avoiding traps, and collecting crucial supplies and files for the final confrontation.',
+    'After leaving the wrecked ship, Ethan enters the Salt Mines with only a serum sample. Depending on previous choices, he may face Mia as an adversary. Ethan collects Crowbar, Flame Rounds, Enhanced Handgun Ammo, Chem Fluid, Strong Chem Fluid, Herbs, Neuro Rounds, Remote Bombs, Grenade Launcher Ammo, and more. He encounters 4-legged and Fat Molded, tripwires, and rigged crates, and uses strategy and explosives to clear paths. Key files are retrieved including Infection Report (#24), E-Necrotoxin Document (#23), and R&D Reports (#26 & #27). After navigating flooded caves, mine shafts, and rigged laboratories, Ethan confronts Eveline, setting the stage for the final battle, while exploring Safe Rooms to stock up on weapons and supplies for the last encounters.',
+    true
+);
+
+insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
+values
+(
+    1,
+    'Finale',
+    8, -- final area after Salt Mines
+    'Ethan returns to the Guest House to confront Eveline in the final showdown, using all collected weapons and strategy to survive and end her threat.',
+    'Ethan arrives back at the Guest House, facing hallucinations and flashbacks from Mia while making his way upstairs to the Attic. Mr. Everywhere Bobblehead #20 can be found along the way. He encounters Eveline, who attacks with waves of force and attempts to push him back. Using the Necrotoxin and all available weapons, Ethan fights Eveline, targeting her face while avoiding grabs and tendrils. Grenade Launcher rounds and the Albert bioweapon are used to finish her off. Completing this arc unlocks rewards like Madhouse Difficulty, the modified Albert-01R Handgun, and The Secrets of Defense, depending on playthrough parameters, and presents two possible endings.',
+    true
+);
