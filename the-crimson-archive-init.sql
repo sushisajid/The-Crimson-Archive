@@ -180,7 +180,7 @@ create table Clips(
 	gameID int not null,
 	clipTitle varchar(100) not null,
 	clipURL varchar(2083) not null,
-	mediaType varchar(50),
+	mediaType varchar(50), -- trailer, gameplay, screenshot etc.
 
 	foreign key(gameID) references Games(gameID) on delete cascade
 );
