@@ -437,7 +437,6 @@ insert into Mob_Maps (mobID, mapID) values
 select * from mob_maps;
 
 -- storyArcs
--- ref: https://www.ign.com/wikis/resident-evil-7/Walkthrough
 
 insert into StoryArcs (gameID, arcTitle, arcOrder, summary, description, isMainArc)
 values
@@ -526,3 +525,147 @@ values
     'Ethan arrives back at the Guest House, facing hallucinations and flashbacks from Mia while making his way upstairs to the Attic. Mr. Everywhere Bobblehead #20 can be found along the way. He encounters Eveline, who attacks with waves of force and attempts to push him back. Using the Necrotoxin and all available weapons, Ethan fights Eveline, targeting her face while avoiding grabs and tendrils. Grenade Launcher rounds and the Albert bioweapon are used to finish her off. Completing this arc unlocks rewards like Madhouse Difficulty, the modified Albert-01R Handgun, and The Secrets of Defense, depending on playthrough parameters, and presents two possible endings.',
     true
 );
+
+select * from storyarcs;
+
+-- roles and contributors
+-- refs: https://residentevil.fandom.com/wiki/Resident_Evil_7:_Biohazard/credits
+
+insert into Roles (roleName) values
+('Director'),
+('Art Director'),
+('Presentation Director'),
+('Cinematic Director'),
+('Technical Art Director'),
+('Audio Director'),
+('Lead Composer'),
+('Scenario Director'),
+('Localization Director'),
+('Narrative Consultant'),
+('Lead Programmer'),
+('Lead Level Designer'),
+('Lead Character Artist'),
+('Lead Game Designer'),
+('Lead Gameplay Animator'),
+('Lead Presentation Animator'),
+('Lead Lighting Artist'),
+('Lead VFX Artist'),
+('Lead UX Designer'),
+('Project Manager'),
+('Senior Project Manager');
+
+insert into Contributors (contributorName, specialization) values
+('Koshi Nakanishi', 'Director'),
+('Tomonori Takano', 'Art Director'),
+('Toshihiko Tsuda', 'Art Director'),
+('Hiroyuki Chi', 'Art Director'),
+('Masato Miyazaki', 'Presentation Director'),
+('Navid Khonsari', 'Cinematic Director'),
+('Makoto Fukui', 'Technical Art Director'),
+('Wataru Hachisako', 'Audio Director'),
+('Akiyuki Morimoto', 'Lead Composer'),
+('Morimasa Sato', 'Scenario Director'),
+('Mark Reichwein', 'Localization Director'),
+('Richard Pearsey', 'Narrative Consultant'),
+('Yusuke Noro', 'Lead Programmer'),
+('Tomofumi Ishida', 'Lead Programmer'),
+('Tomohiro Shingu', 'Lead Level Designer'),
+('Hirotada Miyatake', 'Lead Level Designer'),
+('Yuya Kuroyabu', 'Lead Character Artist'),
+('Hajime Horiuchi', 'Lead Game Designer'),
+('Keisuke Yamakawa', 'Lead Game Designer'),
+('Yuki Yanagimoto', 'Lead Gameplay Animator'),
+('Toshiya Kotani', 'Lead Presentation Animator'),
+('Tsuyoshi Irie', 'Lead Presentation Animator'),
+('Yuka Chi', 'Lead Lighting Artist'),
+('Kazumasa Kuroda', 'Lead VFX Artist'),
+('Masahiro Takayama', 'Lead UX Designer'),
+('Makoto Kadono', 'Project Manager'),
+('Yoshizumi Hori', 'Senior Project Manager');
+
+-- games_contributors relation
+
+-- Resident Evil 7 contributors
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Koshi Nakanishi' and Roles.roleName = 'Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Tomonori Takano' and Roles.roleName = 'Art Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Toshihiko Tsuda' and Roles.roleName = 'Art Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Hiroyuki Chi' and Roles.roleName = 'Art Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Masato Miyazaki' and Roles.roleName = 'Presentation Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Navid Khonsari' and Roles.roleName = 'Cinematic Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Makoto Fukui' and Roles.roleName = 'Technical Art Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Wataru Hachisako' and Roles.roleName = 'Audio Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Akiyuki Morimoto' and Roles.roleName = 'Lead Composer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Morimasa Sato' and Roles.roleName = 'Scenario Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Mark Reichwein' and Roles.roleName = 'Localization Director';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Richard Pearsey' and Roles.roleName = 'Narrative Consultant';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Yusuke Noro' and Roles.roleName = 'Lead Programmer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Tomofumi Ishida' and Roles.roleName = 'Lead Programmer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Tomohiro Shingu' and Roles.roleName = 'Lead Level Designer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Hirotada Miyatake' and Roles.roleName = 'Lead Level Designer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Yuya Kuroyabu' and Roles.roleName = 'Lead Character Artist';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Hajime Horiuchi' and Roles.roleName = 'Lead Game Designer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Keisuke Yamakawa' and Roles.roleName = 'Lead Game Designer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Yuki Yanagimoto' and Roles.roleName = 'Lead Gameplay Animator';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Toshiya Kotani' and Roles.roleName = 'Lead Presentation Animator';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Tsuyoshi Irie' and Roles.roleName = 'Lead Presentation Animator';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Yuka Chi' and Roles.roleName = 'Lead Lighting Artist';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Kazumasa Kuroda' and Roles.roleName = 'Lead VFX Artist';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Masahiro Takayama' and Roles.roleName = 'Lead UX Designer';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Makoto Kadono' and Roles.roleName = 'Project Manager';
+
+insert into Games_Contributors (gameID, contributorID, roleID)
+select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Yoshizumi Hori' and Roles.roleName = 'Senior Project Manager';
+
+select * from games_contributors;
