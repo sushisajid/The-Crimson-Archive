@@ -76,6 +76,9 @@ system engineer by occupation, trained as a mutant due to mold infection. marrie
 father of rosemary winters. courageous, determined, and resourceful under extreme bioweapon threats.',
 'todd soley', 'hidenobu kiuchi', 'yaya chamki', '');
 
+update ingamecharacters
+set spriteURL
+
 select * from ingamecharacters;
 
 -- appearances
