@@ -1,3 +1,5 @@
+set search_path to crimson;
+
 insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, multiplayersupport) values
 ('D:\the-crimson-archive\URLs\Games\GameCovers\Re7_xone_cover.jpg', 
 'D:\the-crimson-archive\URLs\Games\GameLogos\Resident_Evil_7_logo.jpg', 
@@ -6,7 +8,7 @@ insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, m
 players experience the terror directly from the first person perspective. Resident Evil 7 embodies 
 the series'' signature gameplay elements of exploration and tense atmosphere that first coined 
 “survival horror” some twenty years ago; meanwhile, a complete refresh of gameplay systems 
-simultaneously propels the survival horror experience to the next level.', '24-01-2017', true);
+simultaneously propels the survival horror experience to the next level.', '2017-01-24', true);
 
 insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, multiplayersupport) values
 ('D:\the-crimson-archive\URLs\Games\GameCovers\Resident_Evil_Village_NA_Cover_29.jpg', 
@@ -14,7 +16,9 @@ insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, m
 'Years after the tragic events of Resident Evil 7 biohazard, Ethan Winters has started over with 
 his wife Mia, finally living in peace and putting the past behind them. However, Chris Redfield, 
 the legendary hero from previous Resident Evil games, suddenly disrupts their life, throwing a 
-devastated Ethan into a new and twisted nightmare in search of answers.', '07-05-2021', false);
+devastated Ethan into a new and twisted nightmare in search of answers.', '2021-05-07', false);
+
+select * from games;
 
 -- platforms
 
@@ -26,6 +30,8 @@ insert into Platforms (platformName) values
 ('Xbox Series X/S'),
 ('Nintendo Switch'),
 ('iOS');
+
+select * from platforms;
 
 insert into Games_Platforms (gameID, platformID) values
 (1, 1),  -- Resident Evil 7 on PC
@@ -43,6 +49,8 @@ insert into Games_Platforms (gameID, platformID) values
 (2, 6),  -- Resident Evil Village on Nintendo Switch
 (2, 7);  -- Resident Evil Village on iOS
 
+select * from games_platforms;
+
 -- characters
 
 insert into InGameCharacters (characterName, backstory, description, englishVA, japaneseVA, motionCapture, spriteURL) values
@@ -55,12 +63,16 @@ system engineer by occupation, trained as a mutant due to mold infection. marrie
 father of rosemary winters. courageous, determined, and resourceful under extreme bioweapon threats.',
 'todd soley', 'hidenobu kiuchi', 'yaya chamki', '');
 
+select * from ingamecharacters;
+
 -- appearances
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
-    1,  -- this should match Ethan Winters' characterID after insertion
+    1,
     currval('InGameCharacters_characterID_seq'),  -- gets the last inserted characterID
     true,
     true,
     '- infected by mold, giving him enhanced resilience.\n- involved with major bioterrorism incidents in dulvey parish (baker family, eveline).\n- receives aid and guidance from zoe baker.\n- uses weapons including axes, chainsaws, and experimental bsaa equipment (albert-01).\n- dies heroically while saving family.'
 );
+
+select * from appearances;
