@@ -270,5 +270,9 @@ insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes
     'hoffman appears as a man in his 30s, wearing casual clothing appropriate for a civilian: shirt, pants, and shoes. medium-length brown hair, worried expression. animations only show his interactions as a participant in lucas'' card game, including electrocution and trap sequences.'
 );
 
+update appearances
+set notes ='ethan winters appears as a rugged civilian in his early 30s, wearing a dark green jacket over a gray hoodie, blue jeans, and brown boots. he has short brown hair and a clean-shaven face. his outfit includes practical gear such as a flashlight and a weapons belt, and his animations display realistic weight and movement.'
+where characterID = 1;
+
 select * from ingamecharacters;
 select * from appearances;
