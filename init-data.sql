@@ -77,7 +77,8 @@ father of rosemary winters. courageous, determined, and resourceful under extrem
 'todd soley', 'hidenobu kiuchi', 'yaya chamki', '');
 
 update ingamecharacters
-set spriteURL
+set spriteURL = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameLogos/InGameCharacters/ethan_re7.webp'
+WHERE characterID = 1;
 
 select * from ingamecharacters;
 
