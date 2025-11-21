@@ -1,9 +1,7 @@
 set search_path to crimson;
 
 insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, multiplayersupport) values
-('D:\the-crimson-archive\URLs\Games\GameCovers\Re7_xone_cover.jpg', 
-'D:\the-crimson-archive\URLs\Games\GameLogos\Resident_Evil_7_logo.jpg', 
-'Resident Evil 7: Biohazard', 
+(NULL, NULL, 'Resident Evil 7: Biohazard', 
 'Set in modern day rural America and taking place after the dramatic events of Resident Evil® 6, 
 players experience the terror directly from the first person perspective. Resident Evil 7 embodies 
 the series'' signature gameplay elements of exploration and tense atmosphere that first coined 
@@ -11,12 +9,27 @@ the series'' signature gameplay elements of exploration and tense atmosphere tha
 simultaneously propels the survival horror experience to the next level.', '2017-01-24', true);
 
 insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, multiplayersupport) values
-('D:\the-crimson-archive\URLs\Games\GameCovers\Resident_Evil_Village_NA_Cover_29.jpg', 
-'D:\the-crimson-archive\URLs\Games\GameLogos\RESIDENT_EVIL_VILLAGE_logo.jpg', 'Resident Evil Village', 
+(NULL, NULL, 'Resident Evil Village',
 'Years after the tragic events of Resident Evil 7 biohazard, Ethan Winters has started over with 
 his wife Mia, finally living in peace and putting the past behind them. However, Chris Redfield, 
 the legendary hero from previous Resident Evil games, suddenly disrupts their life, throwing a 
 devastated Ethan into a new and twisted nightmare in search of answers.', '2021-05-07', false);
+
+UPDATE Games
+SET gamecoverurl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameCovers/Re7_xone_cover.jpg'
+WHERE gameID = 1;
+
+UPDATE Games
+SET gamelogourl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameLogos/Resident_Evil_7_logo.jpg'
+WHERE gameID = 1;
+
+UPDATE Games
+SET gamecoverurl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameCovers/Resident_Evil_Village_NA_Cover_29.jpg'
+WHERE gameID = 2;
+
+UPDATE Games
+SET gamelogourl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameLogos/RESIDENT_EVIL_VILLAGE_logo.jpg'
+WHERE gameID = 2;
 
 select * from games;
 
