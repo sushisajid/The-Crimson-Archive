@@ -276,3 +276,21 @@ where characterID = 1;
 
 select * from ingamecharacters;
 select * from appearances;
+
+-- games_characters
+
+insert into Games_Characters (gameID, characterID) values
+(1, 1),  -- ethan winters
+(1, 2),  -- mia winters
+(1, 3),  -- david anderson
+(1, 4),  -- zoe baker
+(1, 5),  -- chris redfield
+(1, 6),  -- alan droney
+(1, 7),  -- lucas baker
+(1, 8),  -- eveline
+(1, 9),  -- jack baker
+(1, 10), -- marguerite baker
+(1, 11), -- clancy jarvis
+(1, 12), -- peter walken
+(1, 13), -- andre stickland
+(1, 14); -- hoffman
