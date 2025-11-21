@@ -88,6 +88,7 @@ create table Maps(
 	mapName varchar(100) not null,
 	locationType varchar(50),
 	description text not null,
+	mapURL varchar(2083),
 
 	foreign key(gameID) references Games(gameID) on delete cascade
 );

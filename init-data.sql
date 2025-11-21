@@ -1,4 +1,4 @@
-set search_path to crimson;
+set search_path to crimson; -- run ts first always
 
 insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, multiplayersupport) values
 (NULL, NULL, 'Resident Evil 7: Biohazard', 
@@ -294,3 +294,7 @@ insert into Games_Characters (gameID, characterID) values
 (1, 12), -- peter walken
 (1, 13), -- andre stickland
 (1, 14); -- hoffman
+
+select characterID, characterName from InGameCharacters;
+
+-- mobs and maps
