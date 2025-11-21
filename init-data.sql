@@ -1,5 +1,3 @@
--- note: add game cover + logo URLs later
-
 insert into Games (gamecoverurl, gamelogourl, title, plotsummary, releasedate, multiplayersupport) values
 ('D:\the-crimson-archive\URLs\Games\GameCovers\Re7_xone_cover.jpg', 
 'D:\the-crimson-archive\URLs\Games\GameLogos\Resident_Evil_7_logo.jpg', 
