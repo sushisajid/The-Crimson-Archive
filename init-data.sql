@@ -31,8 +31,6 @@ UPDATE Games
 SET gamelogourl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameLogos/RESIDENT_EVIL_VILLAGE_logo.jpg'
 WHERE gameID = 2;
 
-select * from games;
-
 -- platforms
 
 insert into Platforms (platformName) values
@@ -43,8 +41,6 @@ insert into Platforms (platformName) values
 ('Xbox Series X/S'),
 ('Nintendo Switch'),
 ('iOS');
-
-select * from platforms;
 
 insert into Games_Platforms (gameID, platformID) values
 (1, 1),  -- Resident Evil 7 on PC
@@ -274,9 +270,6 @@ update appearances
 set notes ='ethan winters appears as a rugged civilian in his early 30s, wearing a dark green jacket over a gray hoodie, blue jeans, and brown boots. he has short brown hair and a clean-shaven face. his outfit includes practical gear such as a flashlight and a weapons belt, and his animations display realistic weight and movement.'
 where characterID = 1;
 
-select * from ingamecharacters;
-select * from appearances;
-
 -- games_characters
 
 insert into Games_Characters (gameID, characterID) values
@@ -294,8 +287,6 @@ insert into Games_Characters (gameID, characterID) values
 (1, 12), -- peter walken
 (1, 13), -- andre stickland
 (1, 14); -- hoffman
-
-select characterID, characterName from InGameCharacters;
 
 -- maps
 -- ref: https://www.evilresource.com/resident-evil-7/maps
@@ -359,8 +350,7 @@ insert into Maps (gameID, mapName, floorName, description, mapURL) values
 (1, 'Salt Mine', 'B2', 'second basement level of the salt mine, experimentation chambers and cargo zones.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b2.png'),
 (1, 'Salt Mine', 'B1', 'first basement level of the salt mine, access to final confrontation rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b1.png');
 
-select * from Maps;
-
+-- mobs
 -- standard molded
 insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL, spawnNotes) values
 (1, 'Molded', 'standard',
@@ -478,8 +468,6 @@ insert into Mob_Maps (mobID, mapID) values
 -- Marguerite Baker (Infected) (Greenhouse → Main House 2F)
 insert into Mob_Maps (mobID, mapID) values
 (9, 5);
-
-select * from mob_maps;
 
 -- storyArcs
 -- ref: https://www.polygon.com/resident-evil-7-guide/2017/1/26/14401532/walkthrough/
@@ -783,8 +771,6 @@ insert into StoryArcs (
     false
 );
 
-select * from storyarcs order by storyarcid;
-
 -- roles and contributors
 -- refs: https://residentevil.fandom.com/wiki/Resident_Evil_7:_Biohazard/credits
 
@@ -925,4 +911,18 @@ select 1, contributorID, roleID from Contributors, Roles where Contributors.cont
 insert into Games_Contributors (gameID, contributorID, roleID)
 select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Yoshizumi Hori' and Roles.roleName = 'Senior Project Manager';
 
+-- reviewing data
+
+select * from games;
+select * from platforms;
+select * from games_platforms;
+select * from ingamecharacters;
+select * from appearances;
+select characterID, characterName from InGameCharacters;
+select * from maps;
+select * from mobs;
+select * from mob_maps;
+select * from storyarcs;
+select * from roles;
+select * from contributors;
 select * from games_contributors;
