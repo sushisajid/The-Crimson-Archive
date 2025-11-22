@@ -104,7 +104,7 @@ insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes
 
 insert into InGameCharacters (characterName, backstory, description, englishVA, japaneseVA, motionCapture, spriteURL) values
 ('David Anderson',
-'african-american deputy sheriff assigned to patrol the dulvey bayou following a series of disappearances. investigates the baker house, encounters ethan winters, but is killed by jack baker early in the incident. his corpse becomes partially converted by mold and is used by lucas baker to manipulate ethan. his death is later covered up by the sheriff’s office and bsaa as a gas leak.',
+'african-american deputy sheriff assigned to patrol the dulvey bayou following a series of disappearances. investigates the baker house, encounters ethan winters, but is killed by jack baker early in the incident. his corpse becomes partially converted by mold and is used by lucas baker to manipulate ethan. his death is later covered up by the sheriff''s office and bsaa as a gas leak.',
 'male, african-american, born c.1986; 175 cm (5''9"), 60 kg (130 lb). deputy sheriff by occupation; dutiful but skeptical and inexperienced when confronted with biohazard threats.',
 'hari williams', 'minoru kawai', 'pierre dager', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/david_re7.png');
 
@@ -118,7 +118,7 @@ insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes
 
 insert into InGameCharacters (characterName, backstory, description, englishVA, japaneseVA, motionCapture, spriteURL) values
 ('Zoe Baker',
-'female from dulvey, louisiana; daughter of jack and marguerite baker, sister to lucas. involved in the dulvey incident as a captive resistant to eveline’s mind control. helps ethan winters navigate the baker estate, reattaches his hand, provides the genome codex, and guides him to cure her and mia. after being captured and partially calcified, she is rescued and quarantined, later gaining a new identity and working as a rookie reporter in new orleans while investigating the incident and the origins of eveline.',
+'female from dulvey, louisiana; daughter of jack and marguerite baker, sister to lucas. involved in the dulvey incident as a captive resistant to eveline''s mind control. helps ethan winters navigate the baker estate, reattaches his hand, provides the genome codex, and guides him to cure her and mia. after being captured and partially calcified, she is rescued and quarantined, later gaining a new identity and working as a rookie reporter in new orleans while investigating the incident and the origins of eveline.',
 'female, caucasian/american, born c.1994; 170 cm (5''7"), 58 kg (130 lb). resilient, intelligent, resourceful; skilled at surviving in extreme circumstances and assisting others under duress.',
 'giselle gilbert', 'yu kobayashi', 'giselle gilbert', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/zoe_re7.webp');
 
@@ -132,7 +132,7 @@ insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes
 
 insert into InGameCharacters (characterName, backstory, description, englishVA, japaneseVA, motionCapture, spriteURL) values
 ('Chris Redfield',
-'american special operations unit operator with bsaa; veteran bioweapon hunter. older brother of claire redfield, mentor to rosemary winters. in the dulvey incident (2017), he responds to blue umbrella’s request to apprehend lucas baker and contain the mold bioweapon. assists ethan winters and mia, eliminates mutant lucas baker, and later coordinates the rescue of zoe baker with her uncle joe.',
+'american special operations unit operator with bsaa; veteran bioweapon hunter. older brother of claire redfield, mentor to rosemary winters. in the dulvey incident (2017), he responds to blue umbrella''s request to apprehend lucas baker and contain the mold bioweapon. assists ethan winters and mia, eliminates mutant lucas baker, and later coordinates the rescue of zoe baker with her uncle joe.',
 'male, caucasian/american, born c.1973; height varies between 181 - 185 cm (5''11" - 6''1"), mass 80 - 100 kg (176 - 220 lb). blood type o. highly skilled marksman, tactician, and hand-to-hand combatant; specializes in biohazard containment and bioweapon neutralization.',
 'david vaughn', 'hiroki tōchi', 'david vaughn', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/chris_re7.webp');
 
@@ -146,7 +146,7 @@ insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes
 
 insert into InGameCharacters (characterName, backstory, description, englishVA, japaneseVA, motionCapture, spriteURL) values
 ('Alan Droney',
-'special agent for the connections, assigned alongside mia winters to act as handler and parental figure for eveline. during transport on the ss annabelle, eveline’s mold infection overtakes the crew, including alan. after showing symptoms, he sends mia to subdue eveline, but eveline accelerates the mold inside him, killing him. he later appears in a group photo in miranda’s lab in resident evil village.',
+'special agent for the connections, assigned alongside mia winters to act as handler and parental figure for eveline. during transport on the ss annabelle, eveline''s mold infection overtakes the crew, including alan. after showing symptoms, he sends mia to subdue eveline, but eveline accelerates the mold inside him, killing him. he later appears in a group photo in miranda''s lab in resident evil village.',
 'male, caucasian/american, born c.1961, died october 5, 2014 (aged 53). height 180 cm (5''11"), mass 80 kg (180 lb).',
 'kip pardue', 'kyomitsu mizuuchi', 'mark hobart', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/alan_re7.webp');
 
@@ -160,7 +160,7 @@ insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes
 
 insert into InGameCharacters (characterName, backstory, description, englishVA, japaneseVA, motionCapture, spriteURL) values
 ('Lucas Baker',
-'firstborn of jack and marguerite baker from dulvey, louisiana. infected by eveline’s mold, gains regenerative abilities and a sadistic streak, designing deadly puzzles to kill victims. acted as a researcher for the Connections syndicate, later betrays them and kills their scientists. mutates and is killed by chris redfield in the salt mines after attempting to sell eveline’s bioweapon data.',
+'firstborn of jack and marguerite baker from dulvey, louisiana. infected by eveline''s mold, gains regenerative abilities and a sadistic streak, designing deadly puzzles to kill victims. acted as a researcher for the Connections syndicate, later betrays them and kills their scientists. mutates and is killed by chris redfield in the salt mines after attempting to sell eveline''s bioweapon data.',
 'male, caucasian/american, height 182 cm (6''0"), mass 68 kg (150 lb), deceased. family: jack baker (father), marguerite baker (mother), joe baker (uncle), zoe baker (sister).',
 'jesse pimentel', 'setsuji sato', 'jesse pimentel', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/lucas_re7.webp');
 
@@ -439,6 +439,8 @@ select * from mob_maps;
 -- storyArcs
 -- ref: https://www.polygon.com/resident-evil-7-guide/2017/1/26/14401532/walkthrough/
 
+-- 1. Guest House
+
 insert into StoryArcs (
     gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
 ) values (
@@ -451,21 +453,96 @@ insert into StoryArcs (
     true
 );
 
+-- 1-1 Getting to the Guest House
+
 insert into StoryArcs (
     gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
 ) values (
     1,
-    currval('StoryArcs_storyArcID_seq'),  -- replace with storyArcID of "Guest House" immediately b4 this one
+    1,
     '1-1 Getting to the Guest House',
     1,
     'Ethan navigates the woods, investigates the abandoned van, and finds the back entrance to the guest house.',
     $$
-    After the intro cutscenes, Ethan arrives at the Baker property and follows the forest path past the chained gate. After investigating the abandoned Sewer Gators van and walking through the "ACCEPT HER GIFT" sign area, he reaches the backyard and finds Mia’s driver’s license near a smoldering fire pit. Ethan enters the guest house through the back door, triggering the start of the nightmare.
+    After the intro cutscenes, Ethan arrives at the Baker property and follows the forest path past the chained gate. After investigating the abandoned Sewer Gators van and walking through the "ACCEPT HER GIFT" sign area, he reaches the backyard and finds Mia''s driver''s license near a smoldering fire pit. Ethan enters the guest house through the back door, triggering the start of the nightmare.
     $$
     ,
     false
 );
 
+-- 2. Main House
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    null,
+    'Main House',
+    2,
+    'Ethan survives the dinner, escapes Jack''s pursuit, unlocks the Main Hall, explores the house, and collects all three Dog Head Emblems required to escape to the yard.',
+    $$
+    Ethan wakes up at the Baker dinner table and escapes the family. He sneaks through the Main House while being hunted by Jack, navigating the Dining Area, Kitchen, Garage, Main Hall, Recreation Room, Bathroom, and Basement. After accessing Mia''s tape and solving environmental puzzles, Ethan collects the three Dog Head Emblems required to open the Cerberus door to the yard.
+    $$,
+    true
+);
+
+-- 2-1 to 2-4
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    3,
+    '2-1 The Garage',
+    1,
+    'Ethan escapes Jack''s chase, reaches the Garage, and defeats Jack in a brutal fight.',
+    $$
+    Ethan sneaks through the Dining Area and Hallways while Jack stalks him relentlessly. After obtaining the Hatch Key and crawling into the Laundry Room, Ethan reaches the Garage and attempts to warn the deputy. Jack kills him and forces Ethan into a life-or-death fight involving a patrol car, melee weapons, and improvised combat.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    3,
+    '2-2 Mia''s Tape',
+    2,
+    'Ethan opens the Main Hall, explores new rooms, and learns important clues from Mia''s tape.',
+    $$
+    After using the Ox Statuette to enter the Main Hall, Ethan collects items, interacts with Zoe via phone, and views Mia''s VHS tape. In the tape, Mia sneaks through the Old House while avoiding Marguerite, revealing the first major shadow puzzle and hinting at the lantern mechanic.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    3,
+    '2-3 Jack''s Back',
+    3,
+    'Jack returns, forcing Ethan into the basement and Morgue while Molded enemies appear for the first time.',
+    $$
+    Ethan unlocks the Dissection Room area beneath the house and encounters Molded creatures for the first time. He searches the Processing Area for the Relief key and pushes deeper into the Morgue while Jack reappears and stalks him again.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    3,
+    '2-4 Final Dog''s Head',
+    4,
+    'Ethan secures the final Dog''s Head Emblem and defeats Jack in the chainsaw arena.',
+    $$
+    Ethan retrieves the final Dog''s Head Emblem in the Morgue but is ambushed by Jack, triggering a close-quarters arena fight. Using body bags, blocking, and the chainsaw, Ethan dismembers Jack and ends the confrontation. With all three Dog Heads collected, Ethan unlocks the Cerberus Door and escapes into the Yard.
+    $$,
+    false
+);
 
 select * from storyarcs;
 
