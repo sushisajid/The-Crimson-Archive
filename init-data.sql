@@ -302,17 +302,62 @@ select characterID, characterName from InGameCharacters;
 
 -- guest house maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Guest House', '1F', 'first floor of the guest house in the baker estate, includes main living area, dining, and hallway.', NULL),
-(1, 'Guest House', '2F', 'second floor of the guest house, includes bedrooms and bathroom.', NULL),
-(1, 'Guest House', '3F', 'third floor of the guest house, attic storage and additional rooms.', NULL),
-(1, 'Guest House', 'B1', 'basement of the guest house, storage and access to hidden areas.', NULL);
+(1, 'Guest House', '1F', 'first floor of the guest house in the baker estate, includes main living area, dining, and hallway.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_1f.png'),
+(1, 'Guest House', '2F', 'second floor of the guest house, includes bedrooms and bathroom.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_2f.png'),
+(1, 'Guest House', '3F', 'third floor of the guest house, attic storage and additional rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_3f.png'),
+(1, 'Guest House', 'B1', 'basement of the guest house, storage and access to hidden areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_b1.png');
 
 -- main house maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Main House', '1F', 'first floor of the main house, includes kitchen, living room, and foyer.', NULL),
-(1, 'Main House', '2F', 'second floor of the main house, bedrooms and study areas.', NULL),
-(1, 'Main House', 'Attic', 'attic of the main house, storage area with hidden secrets.', NULL),
-(1, 'Main House', 'Processing Area', 'processing area of the main house, contains Eveline containment and lab equipment.', NULL);
+(1, 'Main House', '1F', 'first floor of the main house, includes kitchen, living room, and foyer.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_1f.png'),
+(1, 'Main House', '2F', 'second floor of the main house, bedrooms and study areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_2f.png'),
+(1, 'Main House', 'Attic', 'attic of the main house, storage area with hidden secrets.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_attic.png'),
+(1, 'Main House', 'Processing Area', 'processing area of the main house, contains Eveline containment and lab equipment.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_processingArea.png');
+
+-- yard maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Yard', NULL, 'outdoor area of the baker estate connecting multiple buildings, includes trailer and path to old house.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/yard.png');
+
+-- old house maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Old House', '1F', 'first floor of the old house, includes kitchen, cellar, and dining area.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_1f.png'),
+(1, 'Old House', '2F', 'second floor of the old house, bedrooms and storage areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_2f.png'),
+(1, 'Old House', '1F (WEST)', 'western first-floor section of the old house, includes altar access and crawl spaces.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_1f_west.png'),
+(1, 'Old House', '2F (WEST)', 'western second-floor area of the old house, connected to secret passages.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_2f_west.png');
+
+-- testing area maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Testing Area', '1F', 'first floor of the testing area, contains traps, puzzle rooms, and control rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/testingarea_1f.png'),
+(1, 'Testing Area', '2F', 'second floor of the testing area, includes barn arena and combat zones.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/testingarea_2f.png');
+
+-- boat house maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Boat House', '1F', 'first floor of the boat house, dock and access to swamp.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/boathouse_1f.png'),
+(1, 'Boat House', '1F (STORAGE)', 'storage section of the first floor of the boat house.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/boathouse_storage_1f.png'),
+(1, 'Boat House', '2F (STORAGE)', 'storage upper level with access to machinery and balcony.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/boathouse_storage_2f.png');
+
+-- wrecked ship maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Wrecked Ship', 'S3', 'third submerged level of the wrecked ship, flooded corridors and cargo.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_s3.png'),
+(1, 'Wrecked Ship', 'S2', 'second submerged level of the wrecked ship, engine room and crew storage.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_s2.png'),
+(1, 'Wrecked Ship', 'S1', 'first submerged level of the wrecked ship, maintenance access and labs.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_s1.png'),
+(1, 'Wrecked Ship', '1F', 'first floor of the wrecked ship, main hall and control rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_1f.png'),
+(1, 'Wrecked Ship', '2F', 'second floor of the wrecked ship, sleeping quarters and cafeteria.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_2f.png'),
+(1, 'Wrecked Ship', '3F', 'third floor of the wrecked ship, command deck and captain’s cabin.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_3f.png'),
+(1, 'Wrecked Ship', '4F', 'fourth floor of the wrecked ship, radio tower and escape point.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_4f.png');
+
+-- ship maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Ship', '2F', 'second floor of the tanker ship, crew rooms and hallways.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ship_2f.png'),
+(1, 'Ship', 'S2', 'second submerged level of the ship, engine pumps and storage.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ship_s2.png'),
+(1, 'Ship', '3F', 'third floor of the ship, communications and weapons storage.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ship_3f.png');
+
+-- salt mine maps
+insert into Maps (gameID, mapName, floorName, description, mapURL) values
+(1, 'Salt Mine', 'Swamp', 'entrance area of the salt mine connected through the swamp region.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/swamp.png'),
+(1, 'Salt Mine', 'B3', 'third basement level of the salt mine, mining tunnels and control rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b3.png'),
+(1, 'Salt Mine', 'B2', 'second basement level of the salt mine, experimentation chambers and cargo zones.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b2.png'),
+(1, 'Salt Mine', 'B1', 'first basement level of the salt mine, access to final confrontation rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b1.png');
 
 select * from Maps;
 
@@ -543,7 +588,6 @@ insert into StoryArcs (
     $$,
     false
 );
-
 
 -- 3. Old House
 
