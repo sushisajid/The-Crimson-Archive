@@ -334,7 +334,7 @@ insert into Maps (gameID, mapName, floorName, description, mapURL) values
 (1, 'Wrecked Ship', 'S1', 'first submerged level of the wrecked ship, maintenance access and labs.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_s1.png'),
 (1, 'Wrecked Ship', '1F', 'first floor of the wrecked ship, main hall and control rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_1f.png'),
 (1, 'Wrecked Ship', '2F', 'second floor of the wrecked ship, sleeping quarters and cafeteria.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_2f.png'),
-(1, 'Wrecked Ship', '3F', 'third floor of the wrecked ship, command deck and captain’s cabin.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_3f.png'),
+(1, 'Wrecked Ship', '3F', 'third floor of the wrecked ship, command deck and captain''s cabin.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_3f.png'),
 (1, 'Wrecked Ship', '4F', 'fourth floor of the wrecked ship, radio tower and escape point.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_4f.png');
 
 -- ship maps
@@ -648,9 +648,9 @@ insert into StoryArcs (
     null,
     'Testing Area',
     4,
-    'Ethan explores the Testing Area, including Lucas’ traps, VHS tapes, and the journey to the boathouse, uncovering more horrors and puzzles.',
+    'Ethan explores the Testing Area, including Lucas'' traps, VHS tapes, and the journey to the boathouse, uncovering more horrors and puzzles.',
     $$
-    After leaving the old house, Ethan enters the Testing Area, a series of interconnected rooms and challenges set up by Lucas. He navigates the dissection room, master bedroom, and Lucas’ personal rooms, including the attic and backyard, encountering deadly traps and uncovering disturbing clues. Ethan finds the Happy Birthday VHS tape, experiences Lucas’ twisted party setup, and ultimately makes his way toward the boathouse, facing both puzzles and enemies while piecing together the Baker family’s sinister plans.
+    After leaving the old house, Ethan enters the Testing Area, a series of interconnected rooms and challenges set up by Lucas. He navigates the dissection room, master bedroom, and Lucas'' personal rooms, including the attic and backyard, encountering deadly traps and uncovering disturbing clues. Ethan finds the Happy Birthday VHS tape, experiences Lucas'' twisted party setup, and ultimately makes his way toward the boathouse, facing both puzzles and enemies while piecing together the Baker family''s sinister plans.
     $$,
     true
 );
@@ -660,13 +660,13 @@ insert into StoryArcs (
 ) values (
     1,
     12,
-    '4-1 Dissection Room, Master Bedroom, Lucas’ Room, Attic and The Backyard',
+    '4-1 Dissection Room, Master Bedroom, Lucas'' Room, Attic and The Backyard',
     4.1,
-    'Ethan navigates Lucas’ traps, collects items, solves puzzles, and encounters new enemies in the Testing Area.',
+    'Ethan navigates Lucas'' traps, collects items, solves puzzles, and encounters new enemies in the Testing Area.',
     $$
-    Ethan follows Lucas’ instructions into the dissection room, finding the rest of the deputy’s body and obtaining the snake key while facing crawling molded enemies. 
+    Ethan follows Lucas'' instructions into the dissection room, finding the rest of the deputy''s body and obtaining the snake key while facing crawling molded enemies. 
     He proceeds to the master bedroom, collecting herbs, ammo, a lock pick, and solving a clock puzzle to reveal a hidden staircase. The attached storage room provides additional treasures and backpack upgrades. 
-    In Lucas’ room, Ethan gathers more ammo, chem fluid, supplements, and a green herb while discovering a button that lowers the attic ladder. 
+    In Lucas'' room, Ethan gathers more ammo, chem fluid, supplements, and a green herb while discovering a button that lowers the attic ladder. 
     In the attic, he finds a Mr. Everywhere, the Happy Birthday VHS tape, toy weapons, and a shadow puzzle that unlocks a blue keycard. 
     Back in the backyard, Ethan deals with crawling molded, completes another shadow puzzle with the wooden axe to obtain a stabilizer shot, and prepares to watch the VHS tape.
     $$,
@@ -680,14 +680,14 @@ insert into StoryArcs (
     12,
     '4-2 Happy Birthday VHS Tape',
     4.2,
-    'Ethan watches the disturbing Happy Birthday tape, completing Lucas’ twisted puzzles and collecting key items to progress.',
+    'Ethan watches the disturbing Happy Birthday tape, completing Lucas'' twisted puzzles and collecting key items to progress.',
     $$
-    Safe in the trailer, Ethan watches the Happy Birthday VHS tape, which details Clancy’s harrowing fate under Lucas’ twisted test. 
+    Safe in the trailer, Ethan watches the Happy Birthday VHS tape, which details Clancy''s harrowing fate under Lucas'' twisted test. 
     He approaches the corpse-clown and retrieves a candle, navigates sprayers that extinguish it, and grabs a winding key from a barrel. 
     Ethan discovers a dirty telescope in the bathroom, cleans it using water from the test area, and uses it to decipher glyphs on the monitors. 
     Back in the cake room, he solves puzzles using the candle, straw doll, quill pen, and dummy finger, ultimately obtaining the password to a locked hallway door. 
-    Ethan retrieves the valve handle from the newly unlocked room and installs it in the pipe to disable the water sprayers, allowing him to complete the puzzle and save Clancy’s progress. 
-    After finishing the tape, he records his progress and prepares for Lucas’ upcoming party.
+    Ethan retrieves the valve handle from the newly unlocked room and installs it in the pipe to disable the water sprayers, allowing him to complete the puzzle and save Clancy''s progress. 
+    After finishing the tape, he records his progress and prepares for Lucas'' upcoming party.
     $$,
     false
 );
@@ -697,11 +697,11 @@ insert into StoryArcs (
 ) values (
     1,
     12,
-    '4-3 Lucas’ Party',
+    '4-3 Lucas'' Party',
     4.3,
-    'Ethan navigates Lucas’ deadly party, avoiding tripwires and traps, gathering key items, and defeating the barn molded to progress.',
+    'Ethan navigates Lucas'' deadly party, avoiding tripwires and traps, gathering key items, and defeating the barn molded to progress.',
     $$
-    Ethan installs the red and blue keycards and enters Lucas’ party. He watches a welcome message on the TV, then proceeds through hallways filled with explosive tripwires, ducking or shooting them to avoid damage. 
+    Ethan installs the red and blue keycards and enters Lucas'' party. He watches a welcome message on the TV, then proceeds through hallways filled with explosive tripwires, ducking or shooting them to avoid damage. 
     Along the way, he collects herbs, handgun ammo, and discovers a repair kit for his broken shotgun, upgrading it to an M21. Cautious navigation through storage rooms nets antique coins, steroids, chem fluid, and strong chem fluid. 
 
     Ethan ascends to the barn area, gathering gunpowder, shotgun shells, and batteries, while avoiding traps and defeating wandering molded. 
@@ -717,12 +717,12 @@ insert into StoryArcs (
     12,
     '4-4 To the Boathouse',
     4.4,
-    'Ethan navigates Lucas’ testing area, solves puzzles, gathers key items, and makes his way through the swamp to reach the boathouse safe room.',
+    'Ethan navigates Lucas'' testing area, solves puzzles, gathers key items, and makes his way through the swamp to reach the boathouse safe room.',
     $$
-    After surviving Lucas’ party, Ethan rides the elevator to a new hallway and gathers supplements and chem fluid while checking the charred corpse with a note revealing the PIN to Lucas’ room. 
+    After surviving Lucas'' party, Ethan rides the elevator to a new hallway and gathers supplements and chem fluid while checking the charred corpse with a note revealing the PIN to Lucas'' room. 
     Using the keypad, he reenacts the Happy Birthday tape sequence, skipping repetitive steps but following the key actions: burning the rope lock, dialing 'LOSER,' installing the valve handle, and placing the candle on the cake.
 
-    Ethan uses a bomb to open a new path, enters Lucas’ room, retrieves the Testing Area map and the D-Series head, and collects his inventory from the box. 
+    Ethan uses a bomb to open a new path, enters Lucas'' room, retrieves the Testing Area map and the D-Series head, and collects his inventory from the box. 
     Moving outside onto the docks, he picks up shotgun shells and handgun ammo while using the crank to raise walkways through the swamp.
 
     Along the piers, Ethan encounters crawling and walking molded enemies emerging from the water. He reaches the boathouse, finding a safe room stocked with green herbs, flame rounds, psychostimulants, chem fluid, strong chem fluid, separating agent, and gunpowder. 
@@ -740,7 +740,7 @@ insert into StoryArcs (
     null,
     'Boathouse',
     5.0,
-    'Ethan reaches the boathouse area after completing Lucas’ tests, preparing for the upcoming confrontation and final sequences.',
+    'Ethan reaches the boathouse area after completing Lucas'' tests, preparing for the upcoming confrontation and final sequences.',
     $$
     After completing the Testing Area challenges, Ethan heads to the boathouse. Use the crank to raise walkways and navigate through the swamp, picking up ammo, chem fluid, and supplies along the way. Be alert for crawling and walking molded that attack from the water and pier. 
 
@@ -766,7 +766,167 @@ insert into StoryArcs (
 
     When the last eye is destroyed, Jack burrows and resurfaces; finish him with your strongest weapon. A brief encore occurs, but Zoe uses one dose of the serum, finally ending him.
 
-    Afterward, follow Zoe to the pier. Choose who to give the serum to, which determines the game’s ending. Regardless of choice, you board the boat and sail away.
+    Afterward, follow Zoe to the pier. Choose who to give the serum to, which determines the game''s ending. Regardless of choice, you board the boat and sail away.
+    $$,
+    false
+);
+
+-- 6. Wrecked Ship
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    null,
+    'Wrecked Ship',
+    6,
+    'After the showdown at the boathouse, Ethan and his partner crash near a massive derelict ship where the nightmare continues.',
+    $$
+    The escape by boat takes a dark turn when a massive black ooze and Eveline interrupt the plan. The vessel runs aground, flinging Ethan and his partner into the rotting hulk of an abandoned ship stranded in the swamp. Once inside, the story takes a sharp shift — the environment is dark, claustrophobic, and crawling with molded.
+
+    The wrecked ship hides key revelations about the origins of Eveline, the Bakers, and the bioweapon program. Resources are scarce, the molded are more aggressive, and the layout is confusing and multi-leveled. The search to regroup — and survive — begins.
+    $$,
+    true
+);
+
+-- 6-1 to 6-4
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    19,
+    '6-1 Into the Wrecked Ship',
+    6.1,
+    'After the boat crash, Mia enters the eerie wrecked ship to search for Ethan — unarmed, disoriented, and stalked by molded.',
+    $$
+    The ship section begins immediately after the crash. Mia wakes up on shore and follows the only path forward into the rusted hull. A brief reunion with Ethan is cut short as Eveline drags him away, forcing Mia deeper into the ship alone.
+
+    Navigation is mostly linear at first — climbing staircases and following long, twisting corridors — punctuated by hallucinations that point the way. Hidden in crawlspaces and flooded rooms are two easy-to-miss Antique Coins, rewarding players who investigate corners instead of rushing forward.
+
+    Eventually, Mia encounters locked doors that require a fuse, and molded enemies start appearing. With no weapons, confrontation isn''t an option. Players must run, dodge, and memorize the route. A green herb and chem fluid can be combined to make a First Aid Med, crucial for survival. Sprinting to the fuse triggers a molded ambush, but a fast retreat avoids damage.
+
+    After installing the fuse, Mia gains access to the upper floors where Eveline sits watching a TV. She demands that Mia watch the old videotape — marking the transition to the next major story section.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    19,
+    '6-2 Old Videotape',
+    6.2,
+    'Inside the videotape, Mia relives the doomed mission to contain Eveline aboard the tanker — armed with a P19 and hunted by molded while trying to fix the elevator and reach Alan.',
+    $$
+    The videotape throws players into Mia''s past on the ship, revealing that she was part of a mission to transport and observe Eveline. Unlike before, Mia starts this sequence fully armed — inventory box by the TV, machine gun ammo on the desk, and the P19 machine gun ready to use.
+
+    The route through the ship winds from the bunk room to the dining hall and kitchen, building up supplies — supplements, herbs, chem fluid, and machine gun rounds — while molded attacks become frequent. The machine gun''s recoil is wild, forcing the player to either chest-spray until recoil drifts to the head or fire controlled bursts under pressure.
+
+    The first major objective is calling the elevator. After looping back to the elevator and killing the molded that drops inside, Mia descends to S2 in search of corrosive — the key item required to melt open locked doors and cabinets throughout the ship.
+
+    S2 is a gauntlet of tight corridors, molded ambushes, item stashes and remote bomb opportunities. The corrosive in the luggage room becomes the turning point, allowing access to all previously blocked doors. Backtracking through the ship unlocks upgrades, ammo and more corrosive, while Eveline mocks Mia through phone calls and hallucinations.
+
+    Eventually, Mia restores access to the upper floors and chases Eveline toward the elevator once again. She reaches the third floor only to find Alan terminally infected. The mission collapses from here: Eveline loses control, the ship becomes overwhelmed with mold, and Alan dies.
+
+    The tape ends with Mia being consumed by Eveline''s outburst — setting up the present-day disaster and explaining how the Baker outbreak began.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    19,
+    '6-3 Looking for Ethan',
+    6.3,
+    'Mia searches the wrecked ship for Ethan, navigating molded attacks, scavenging weapons and corrosives, and restoring elevator access.',
+    $$
+    After the videotape ends, Mia confronts Eveline and finds herself stranded aboard the ruined tanker — unarmed, wounded and desperate to locate Ethan. The elevator becomes the core of the mission, but the elevator car is inaccessible from below, forcing Mia to climb the ladder up the shaft and drop through a hatch into the ship''s bridge.
+
+    The bridge becomes a key navigation hub. The security monitors confirm Ethan is still alive, trapped elsewhere on the ship. Mia collects a ship map and the lug wrench from the captain''s cabin before pushing deeper into the wreckage.
+
+    The ship begins to feel like a scavenger hunt from hell: green herbs in lockers, gunpowder in desk drawers, remote bombs hidden near molded ambush points, and a frustrating locked box hiding an antique coin that Mia can''t reach yet. The elevator doors can be forced open, but the car is missing both a fuse and a cable — meaning Mia will have to explore multiple floors and every dark corner of the ship to restore power.
+
+    Before searching for parts, Mia prioritizes survival. She climbs to the second floor and retrieves a survival knife, sneaks around an armless molded guarding the hall, and reaches a safe room with corrosive and handgun ammo. Using the corrosive, she enters the bunk room and finds the captain''s cabin locker key — the only path to meaningful firepower.
+
+    Returning to the bridge, she unlocks the cabin locker and arms herself with the P19 machine gun, triggering a frantic molded attack the moment she grabs it. From that point on, the wrecked ship segment transforms into a mobile war zone: tight hallways, breakable crates, bombs used as improvised traps, and molded stalking Mia across previously “safe” rooms.
+
+    A puzzle room with mismatched paintings rewards Mia with three more corrosives — essential for reaching hidden upgrades and shortcuts — while the rest of the ship bridges into a loop of gathering ammo, blowing threats away with remote bombs and carving her path back toward the elevator shaft.
+
+    The section ends after assembling enough supplies and mobility to finally commit to repairing the elevator — fuse and cable are now the last missing pieces standing between Mia and Ethan.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    19,
+    '6-4 Fixing the Elevator & Rescuing Ethan',
+    6.4,
+    'Mia retrieves the elevator cable and fuse while surviving heavy molded attacks, repairs the lift, and fights her way through S2 to reach Ethan.',
+    $$
+    Mia returns to the elevator shaft with one clear objective — get it working and reach Ethan. Climbing to the third floor leads her into the control room, where she unlocks a toolbox for an antique coin before burning open a sealed door. The walkway from the old videotape becomes real again, ending in the sick bay where the elevator cable sits waiting. The moment Mia detaches it, a massive fat molded ambushes her. Landing remote bombs ends the threat, allowing Mia to grab the cable, a corrosive, and more bombs before escaping.
+
+    Back at the elevator, Mia installs the cable and drops to the first floor to hunt down the fuse. Molded enemies patrol relentlessly, but Mia detours into the maintenance room to pick up the MPM handgun and save her progress. After retrieving the fuse from its original slot near Eveline''s door, she raids the recreation room for machine gun ammo, herbs, bombs, corrosive, and the final inventory backpack upgrade. More collectibles and diary pages lie ahead, along with another ambush from the crawling molded.
+
+    With the fuse finally installed, Mia hits the S2 button and descends into the mold-covered depths. The path becomes a gauntlet of molded ambushes: surprise attacks from above, waves from the hallway, and close-quarters combat in the two-level arena room. Remote bombs and the machine gun become the only reliable way to survive. A fat molded blocks the staircase, requiring traps or bombs to kill. Past that, Mia raids more cabinets and explosives, even grabbing the last antique coin from a locked corrosive cabinet in the hallway.
+
+    The final sequence leads Mia into the cargo bay — the birthplace of her corrosive supply — for two more remote bombs. Reinforced and running low on time, Mia pushes through the last hallway door and finally confronts Eveline. The scene that follows brings Mia and Ethan back together and launches the next phase of their nightmare.
+    $$,
+    false
+);
+
+-- 7. Salt Mines and the Final Battle
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    null,
+    'Salt Mines & Final Battle',
+    7,
+    'Ethan fights his way through the salt mines and confronts Eveline in the ultimate showdown to end the nightmare.',
+    $$
+    After escaping the wrecked ship, Ethan regains control and descends into the salt mines — a maze of tunnels infested with molded and controlled by Eveline. As he advances through abandoned mining routes, research labs, and armed militia remnants, Ethan uncovers the truth behind Eveline’s origin and the Baker family’s corruption. With weapons, supplies, and intel scattered through the mines, Ethan pushes deeper toward the heart of the infection and prepares for the decisive confrontation that will determine whether he and his family survive.
+    $$,
+    true
+);
+
+-- 7-1 to 7-2
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    24,
+    '7-1 Into the Depths',
+    7.1,
+    'Ethan returns to shore, regroups at the shack, gears up, and fights his way into the salt mines to begin the final stretch of the nightmare.',
+    $$
+    After the confrontation on the wrecked ship, Ethan regains consciousness with a single goal — finish this once and for all. He pushes through the swamp and reaches a lonely shack, scavenging supplies and discovering a radio message hinting that he’s being tracked. Inside the safe room, he finally recovers all of his and Mia’s gear and prepares for the toughest battles ahead, choosing weapons and items wisely before heading out.
+
+    Once ready, Ethan enters the salt mines, where molded swarm relentlessly and resources are scattered between ambushes and traps. Tripwires, explosive barrels, and tight tunnels force Ethan to fight smart while navigating branching tunnels, minecart tracks, and makeshift workstations. Throughout the descent, he finds research logs and reports revealing Eveline’s origin as a bio-weapon and the collapse of her sanity. With the necrotoxin nearly complete and the tunnel system opening into massive caverns, Ethan pushes deeper toward the heart of the mold infection — and toward Eveline.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    24,
+    '7-2 Finding Eveline and the Final Battle',
+    7.2,
+    'Ethan navigates the mines, confronts hallucinations, and finally faces eveline in her monstrous final form to end the nightmare.',
+    $$
+    After surviving the treacherous salt mines, Ethan pushes onward, fighting waves of molded and carefully managing scarce ammo. He crawls through flooded tunnels, ambushes, and traps, collecting supplies like enhanced handgun ammo, remote bombs, and 44 MAG rounds. Eventually, he reaches the guest house, now twisted by Eveline’s psychic hallucinations. Ignoring the illusions, he makes his way to the attic.
+
+    There, Eveline unleashes her full psychic power, knocking Ethan around but causing no direct harm. Ethan injects her with the serum, triggering her final mutation into a massive abomination. The fight escalates through three phases: first, he unloads his most powerful weapons in a confined room; next, he continues the battle outside from the ground, dodging attacks; and finally, he grabs the Albert-01 and takes out Eveline while avoiding her flailing tentacles. With the threat eliminated, the evacuation helicopter arrives — who accompanies Ethan depends on the serum decision made at the boathouse, providing a slightly different ending.
     $$,
     false
 );
