@@ -124,21 +124,25 @@ create table Mob_Maps(
 create table StoryArcs(
 	storyArcID serial primary key,
 	gameID int not null,
-	-- dropping these two cols since we can make do with just arcOrder to point in sequence
+	parentArcID int, -- nullable; main arcs can have no parent and sub arcs reference their parent
+	
+	-- dropping these two cols since we can make do with parentArcID + arcOrder to point in sequence
 	-- prevArcID int,
 	-- nextArcID int,
 
 	arcTitle varchar(150) not null,
-	arcOrder int, -- sequence of arcs in the game
+	arcOrder decimal(5, 2), -- sequence of (sub-)arcs in the game [1.0, 1.1, 2.3 etc.]
 	summary text,
 	description text not null,
-	isMainArc boolean,
+	isMainArc boolean not null,
 	
 	-- startArcID and endArcID can be handled using queries only
 	-- startArcID int not null,
 	-- endArcID int not null
 
-	foreign key (gameID) references Games(gameID) on delete cascade
+	foreign key (gameID) references Games(gameID) on delete cascade,
+	foreign key(parentArcID) references StoryArcs(storyArcID) on delete cascade
+	
 	-- "set null" used instead of "cascade"
 	-- prevents a chain of arcs from being wiped out if one arc is deleted
 	-- foreign key (prevArcID) references StoryArcs(storyArcID) on delete set null,
