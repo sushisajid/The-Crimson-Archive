@@ -461,7 +461,7 @@ insert into StoryArcs (
     1,
     1,
     '1-1 Getting to the Guest House',
-    1,
+    1.1,
     'Ethan navigates the woods, investigates the abandoned van, and finds the back entrance to the guest house.',
     $$
     After the intro cutscenes, Ethan arrives at the Baker property and follows the forest path past the chained gate. After investigating the abandoned Sewer Gators van and walking through the "ACCEPT HER GIFT" sign area, he reaches the backyard and finds Mia''s driver''s license near a smoldering fire pit. Ethan enters the guest house through the back door, triggering the start of the nightmare.
@@ -494,7 +494,7 @@ insert into StoryArcs (
     1,
     3,
     '2-1 The Garage',
-    1,
+    2.1,
     'Ethan escapes Jack''s chase, reaches the Garage, and defeats Jack in a brutal fight.',
     $$
     Ethan sneaks through the Dining Area and Hallways while Jack stalks him relentlessly. After obtaining the Hatch Key and crawling into the Laundry Room, Ethan reaches the Garage and attempts to warn the deputy. Jack kills him and forces Ethan into a life-or-death fight involving a patrol car, melee weapons, and improvised combat.
@@ -508,7 +508,7 @@ insert into StoryArcs (
     1,
     3,
     '2-2 Mia''s Tape',
-    2,
+    2.2,
     'Ethan opens the Main Hall, explores new rooms, and learns important clues from Mia''s tape.',
     $$
     After using the Ox Statuette to enter the Main Hall, Ethan collects items, interacts with Zoe via phone, and views Mia''s VHS tape. In the tape, Mia sneaks through the Old House while avoiding Marguerite, revealing the first major shadow puzzle and hinting at the lantern mechanic.
@@ -522,7 +522,7 @@ insert into StoryArcs (
     1,
     3,
     '2-3 Jack''s Back',
-    3,
+    2.3,
     'Jack returns, forcing Ethan into the basement and Morgue while Molded enemies appear for the first time.',
     $$
     Ethan unlocks the Dissection Room area beneath the house and encounters Molded creatures for the first time. He searches the Processing Area for the Relief key and pushes deeper into the Morgue while Jack reappears and stalks him again.
@@ -536,7 +536,7 @@ insert into StoryArcs (
     1,
     3,
     '2-4 Final Dog''s Head',
-    4,
+    2.4,
     'Ethan secures the final Dog''s Head Emblem and defeats Jack in the chainsaw arena.',
     $$
     Ethan retrieves the final Dog''s Head Emblem in the Morgue but is ambushed by Jack, triggering a close-quarters arena fight. Using body bags, blocking, and the chainsaw, Ethan dismembers Jack and ends the confrontation. With all three Dog Heads collected, Ethan unlocks the Cerberus Door and escapes into the Yard.
@@ -544,7 +544,202 @@ insert into StoryArcs (
     false
 );
 
-select * from storyarcs;
+
+-- 3. Old House
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    null,
+    'Old House',
+    3,
+    'Ethan explores the backyard, trailer, old house, and cellar, gathering items and preparing for upcoming challenges.',
+    $$
+    After leaving the guest house, Ethan navigates the backyard. He collects supplies including herbs, gunpowder, and chem fluid, while investigating the trailer in the middle of the yard. The area contains multiple collectible items, safe rooms, and preparation opportunities for the challenges ahead. Ethan also retraces Mia''s path through the old house and discovers the cellar, assembling new weapons and uncovering more about the Baker family''s horrors.
+    $$,
+    true
+);
+
+-- 3-1 to 3-3
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    8,
+    '3-1 Backyard, Trailer, Old House, and Cellar',
+    3.1,
+    'Ethan completes objectives in the backyard, upgrades his weapons in the trailer, navigates the old house, and explores the cellar.',
+    $$
+    Ethan installs the red dog''s head into the Cerberus door to access the backyard. He collects herbs, gunpowder, antique coins, chem fluid, and separating agents, and uses the trailer as a safe room to repair weapons and spend antique coins. Following Mia''s footsteps, he navigates the old house, combats giant bugs, collects ammo and fuel, and assembles a flamethrower. In the cellar, he burns bug nests, gathers more resources, discovers collectible items, and finally confronts Mia, leading to a tense encounter.
+    $$,
+    false
+);
+
+-- 3-2 The Venomous Predator Puzzle, Crow Key, and Marguerite Fight
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    8,
+    '3-2 The Venomous Predator Puzzle, Crow Key, and Marguerite',
+    3.2,
+    'Ethan solves the Venomous Predator shadow puzzle, navigates the crawlspace and outhouse, acquires the crow key and grenade launcher, and battles Marguerite.',
+    $$
+    Ethan returns to the old house and uses the statue in the gallery to cast a spider-shaped shadow, opening a hidden passage. He traverses a bug-filled crawlspace, collects solid fuel, green herbs, and psychostimulants, and reaches the outhouse using the crank to raise bridges. Inside, he gathers burner fuel, antique coins, and the crow key, then backtracks to the drawing room to unlock the crow door and obtain the grenade launcher. Marguerite confronts Ethan, but he uses his flamethrower, handgun, and shotgun to defeat her. After the fight, he explores the altar, collects notes, diaries, and antique coins, and prepares to enter the greenhouse.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    8,
+    '3-3 The Greenhouse, Lantern Puzzle, and D-Series Arm',
+    3.3,
+    'Ethan navigates the greenhouse, solves the lantern puzzle, collects the D-Series arm, and escapes while fighting molded enemies.',
+    $$
+    Ethan prepares for the greenhouse by stocking up on weapons, flame rounds, and healing items. He enters through the second floor, collects collectible items including green herbs, chem fluid, solid fuel, and flame rounds, and uses the lock pick to open locked drawers. Marguerite returns for a major fight, during which Ethan uses his burner, shotgun, and grenade launcher to defeat her and retrieve the lantern. Following this, Ethan solves the greenhouse collectibles, completes the lantern puzzle at the front door, and navigates through black-mold filled rooms. He discovers the D-Series arm in Eveline''s bedroom via a secret passage, then fights molded enemies while retracing his path to escape back to the trailer to meet Zoe.
+    $$,
+    false
+);
+
+-- 4. Testing Area
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    null,
+    'Testing Area',
+    4,
+    'Ethan explores the Testing Area, including Lucas’ traps, VHS tapes, and the journey to the boathouse, uncovering more horrors and puzzles.',
+    $$
+    After leaving the old house, Ethan enters the Testing Area, a series of interconnected rooms and challenges set up by Lucas. He navigates the dissection room, master bedroom, and Lucas’ personal rooms, including the attic and backyard, encountering deadly traps and uncovering disturbing clues. Ethan finds the Happy Birthday VHS tape, experiences Lucas’ twisted party setup, and ultimately makes his way toward the boathouse, facing both puzzles and enemies while piecing together the Baker family’s sinister plans.
+    $$,
+    true
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    12,
+    '4-1 Dissection Room, Master Bedroom, Lucas’ Room, Attic and The Backyard',
+    4.1,
+    'Ethan navigates Lucas’ traps, collects items, solves puzzles, and encounters new enemies in the Testing Area.',
+    $$
+    Ethan follows Lucas’ instructions into the dissection room, finding the rest of the deputy’s body and obtaining the snake key while facing crawling molded enemies. 
+    He proceeds to the master bedroom, collecting herbs, ammo, a lock pick, and solving a clock puzzle to reveal a hidden staircase. The attached storage room provides additional treasures and backpack upgrades. 
+    In Lucas’ room, Ethan gathers more ammo, chem fluid, supplements, and a green herb while discovering a button that lowers the attic ladder. 
+    In the attic, he finds a Mr. Everywhere, the Happy Birthday VHS tape, toy weapons, and a shadow puzzle that unlocks a blue keycard. 
+    Back in the backyard, Ethan deals with crawling molded, completes another shadow puzzle with the wooden axe to obtain a stabilizer shot, and prepares to watch the VHS tape.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    12,
+    '4-2 Happy Birthday VHS Tape',
+    4.2,
+    'Ethan watches the disturbing Happy Birthday tape, completing Lucas’ twisted puzzles and collecting key items to progress.',
+    $$
+    Safe in the trailer, Ethan watches the Happy Birthday VHS tape, which details Clancy’s harrowing fate under Lucas’ twisted test. 
+    He approaches the corpse-clown and retrieves a candle, navigates sprayers that extinguish it, and grabs a winding key from a barrel. 
+    Ethan discovers a dirty telescope in the bathroom, cleans it using water from the test area, and uses it to decipher glyphs on the monitors. 
+    Back in the cake room, he solves puzzles using the candle, straw doll, quill pen, and dummy finger, ultimately obtaining the password to a locked hallway door. 
+    Ethan retrieves the valve handle from the newly unlocked room and installs it in the pipe to disable the water sprayers, allowing him to complete the puzzle and save Clancy’s progress. 
+    After finishing the tape, he records his progress and prepares for Lucas’ upcoming party.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    12,
+    '4-3 Lucas’ Party',
+    4.3,
+    'Ethan navigates Lucas’ deadly party, avoiding tripwires and traps, gathering key items, and defeating the barn molded to progress.',
+    $$
+    Ethan installs the red and blue keycards and enters Lucas’ party. He watches a welcome message on the TV, then proceeds through hallways filled with explosive tripwires, ducking or shooting them to avoid damage. 
+    Along the way, he collects herbs, handgun ammo, and discovers a repair kit for his broken shotgun, upgrading it to an M21. Cautious navigation through storage rooms nets antique coins, steroids, chem fluid, and strong chem fluid. 
+
+    Ethan ascends to the barn area, gathering gunpowder, shotgun shells, and batteries, while avoiding traps and defeating wandering molded. 
+    After installing the battery in a machine, Lucas triggers the barn fight: Ethan faces a vomiting, fat molded with new projectile attacks. Using cover and focused shotgun shots to the face, Ethan defeats it, then uses the elevator to continue to the next hallway, ready for the challenges ahead.
+    $$,
+    false
+);
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    12,
+    '4-4 To the Boathouse',
+    4.4,
+    'Ethan navigates Lucas’ testing area, solves puzzles, gathers key items, and makes his way through the swamp to reach the boathouse safe room.',
+    $$
+    After surviving Lucas’ party, Ethan rides the elevator to a new hallway and gathers supplements and chem fluid while checking the charred corpse with a note revealing the PIN to Lucas’ room. 
+    Using the keypad, he reenacts the Happy Birthday tape sequence, skipping repetitive steps but following the key actions: burning the rope lock, dialing 'LOSER,' installing the valve handle, and placing the candle on the cake.
+
+    Ethan uses a bomb to open a new path, enters Lucas’ room, retrieves the Testing Area map and the D-Series head, and collects his inventory from the box. 
+    Moving outside onto the docks, he picks up shotgun shells and handgun ammo while using the crank to raise walkways through the swamp.
+
+    Along the piers, Ethan encounters crawling and walking molded enemies emerging from the water. He reaches the boathouse, finding a safe room stocked with green herbs, flame rounds, psychostimulants, chem fluid, strong chem fluid, separating agent, and gunpowder. 
+    After saving, he prepares for the upcoming fight, ensuring sufficient healing items and ammunition, and grabs the D-Series arm before heading upstairs.
+    $$,
+    false
+);
+
+-- 5. Boathouse
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    null,
+    'Boathouse',
+    5.0,
+    'Ethan reaches the boathouse area after completing Lucas’ tests, preparing for the upcoming confrontation and final sequences.',
+    $$
+    After completing the Testing Area challenges, Ethan heads to the boathouse. Use the crank to raise walkways and navigate through the swamp, picking up ammo, chem fluid, and supplies along the way. Be alert for crawling and walking molded that attack from the water and pier. 
+
+    Inside the boathouse, find a safe room stocked with herbs, ammo, chem fluid, and other useful items. Save your progress and organize your inventory, as a major fight is imminent. Collect the D-Series arm and head, then head upstairs to advance the storyline.
+    $$,
+    true
+);
+
+-- 5-1
+
+insert into StoryArcs (
+    gameID, parentArcID, arcTitle, arcOrder, summary, description, isMainArc
+) values (
+    1,
+    17,
+    '5-1 Making the Serum',
+    5.1,
+    'Ethan helps Zoe craft the serum, battles Jack in his monstrous form, and chooses who receives the serum, determining the ending.',
+    $$
+    Before leaving the boathouse safe room, ensure your inventory is ready: have the D-Series arm and head, plenty of first aid meds, and all ammo for your handgun, shotgun, and burner. Leave the grenade launcher behind.
+
+    Head upstairs to cut both girls free and give Zoe the D-Series head and arm. While she makes the serum, Jack returns as a massive, slime-covered monster with glowing yellow eyes. The fight spans two floors, with wide, sweeping attacks. Focus on shooting all his eyes, including hidden ones. 
+
+    When the last eye is destroyed, Jack burrows and resurfaces; finish him with your strongest weapon. A brief encore occurs, but Zoe uses one dose of the serum, finally ending him.
+
+    Afterward, follow Zoe to the pier. Choose who to give the serum to, which determines the game’s ending. Regardless of choice, you board the boat and sail away.
+    $$,
+    false
+);
+
+select * from storyarcs order by storyarcid;
 
 -- roles and contributors
 -- refs: https://residentevil.fandom.com/wiki/Resident_Evil_7:_Biohazard/credits
