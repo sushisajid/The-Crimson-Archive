@@ -2,16 +2,19 @@ from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from models import db, User, Platform, Game, InGameCharacter, Map, Mob, StoryArc, Role, Contributor, Clip, Rating
 from flask_cors import CORS
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
 
 app = Flask(__name__)
 CORS(app)
 
-# replace with your actual credentials
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:ILikeWaffles123@localhost:5432/theCrimsonArchive'
+# -------- DATABASE CONFIGURATION --------
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres.lyyzjyolipwlhiirjhbc:ILikeWaffles123@aws-1-ap-southeast-2.pooler.supabase.com:5432/postgres'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db.init_app(app)
 
 # -------- GAMES --------
-
 @app.route('/games', methods=['GET', 'POST'])
 def handle_games():
     if request.method == 'GET':
@@ -20,7 +23,7 @@ def handle_games():
             "gameID": g.gameid,
             "title": g.title,
             "plotSummary": g.plotsummary,
-            "releaseDate": g.releasedate.isoformat(),
+            "releaseDate": g.releasedate.isoformat() if g.releasedate else None,
             "multiplayerSupport": g.multiplayersupport,
             "gameCoverURL": g.gamecoverurl,
             "gameLogoURL": g.gamelogourl
@@ -31,10 +34,15 @@ def handle_games():
         if not data:
             return jsonify({"error": "No input data provided"}), 400
 
-        new_game = Game (
+        from datetime import datetime
+        releasedate = data.get('releaseDate')
+        if releasedate:
+            releasedate = datetime.fromisoformat(releasedate)
+
+        new_game = Game(
             title=data.get('title'),
             plotsummary=data.get('plotSummary'),
-            releasedate=data.get('releaseDate'),
+            releasedate=releasedate,
             multiplayersupport=data.get('multiplayerSupport', False),
             gamecoverurl=data.get('gameCoverURL'),
             gamelogourl=data.get('gameLogoURL')
@@ -48,7 +56,6 @@ def handle_games():
         }), 201
 
 # -------- USERS --------
-
 @app.route('/users', methods=['GET', 'POST'])
 def handle_users():
     if request.method == 'GET':
@@ -56,15 +63,15 @@ def handle_users():
         return jsonify([{
             "userID": u.userid,
             "username": u.username,
-            "email": u.email,
+            "email": getattr(u, "email", None),
             "displayName": u.displayname,
-            "isDev": u.isdev,
-            "accountCreationDate": u.accountcreationdate.isoformat()
+            "isDev": getattr(u, "isdev", None),
+            "accountCreationDate": u.accountcreationdate.isoformat() if u.accountcreationdate else None
         } for u in users])
 
     elif request.method == 'POST':
         data = request.get_json()
-        new_user = User (
+        new_user = User(
             username=data.get('username'),
             displayname=data.get('displayName'),
             passwordhash=data.get('passwordHash'),
@@ -75,7 +82,6 @@ def handle_users():
         return jsonify({"message": "User added", "userID": new_user.userid}), 201
 
 # -------- PLATFORMS --------
-  
 @app.route('/platforms', methods=['GET', 'POST'])
 def handle_platforms():
     if request.method == 'GET':
@@ -89,7 +95,6 @@ def handle_platforms():
         return jsonify({"message": "Platform added", "platformID": new_platform.platformid}), 201
 
 # -------- IN-GAME CHARACTERS --------
-
 @app.route('/characters', methods=['GET', 'POST'])
 def handle_characters():
     if request.method == 'GET':
@@ -106,7 +111,7 @@ def handle_characters():
         } for c in chars])
     elif request.method == 'POST':
         data = request.get_json()
-        new_char = InGameCharacter (
+        new_char = InGameCharacter(
             charactername=data.get('characterName'),
             backstory=data.get('backstory'),
             description=data.get('description'),
@@ -120,7 +125,6 @@ def handle_characters():
         return jsonify({"message": "Character added", "characterID": new_char.characterid}), 201
 
 # -------- MAPS --------
-
 @app.route('/maps', methods=['GET', 'POST'])
 def handle_maps():
     if request.method == 'GET':
@@ -135,7 +139,7 @@ def handle_maps():
         } for m in maps])
     elif request.method == 'POST':
         data = request.get_json()
-        new_map = Map (
+        new_map = Map(
             gameid=data.get('gameID'),
             mapname=data.get('mapName'),
             floorname=data.get('floorName'),
@@ -163,7 +167,7 @@ def handle_mobs():
         } for m in mobs])
     elif request.method == 'POST':
         data = request.get_json()
-        new_mob = Mob (
+        new_mob = Mob(
             gameid=data.get('gameID'),
             mobname=data.get('mobName'),
             mobtype=data.get('mobType'),
@@ -193,7 +197,7 @@ def handle_storyarcs():
         } for a in arcs])
     elif request.method == 'POST':
         data = request.get_json()
-        new_arc = StoryArc (
+        new_arc = StoryArc(
             gameid=data.get('gameID'),
             parentarcid=data.get('parentArcID'),
             arctitle=data.get('arcTitle'),
@@ -231,7 +235,7 @@ def handle_contributors():
         } for c in contribs])
     elif request.method == 'POST':
         data = request.get_json()
-        new_contrib = Contributor (
+        new_contrib = Contributor(
             contributorname=data.get('contributorName'),
             specialization=data.get('specialization')
         )
@@ -252,7 +256,7 @@ def handle_games_contributors():
         } for gc in gcs])
     elif request.method == 'POST':
         data = request.get_json()
-        new_gc = Contributor (
+        new_gc = Contributor(
             gameid=data.get('gameID'),
             contributorid=data.get('contributorID'),
             roleid=data.get('roleID')
@@ -275,7 +279,7 @@ def handle_clips():
         } for c in clips])
     elif request.method == 'POST':
         data = request.get_json()
-        new_clip = Clip (
+        new_clip = Clip(
             gameid=data.get('gameID'),
             cliptitle=data.get('clipTitle'),
             clipurl=data.get('clipURL'),
@@ -290,18 +294,18 @@ def handle_clips():
 def handle_ratings():
     if request.method == 'GET':
         ratings = Rating.query.all()
-        return jsonify ([{
+        return jsonify([{
             "ratingID": r.ratingid,
             "gameID": r.gameid,
             "userID": r.userid,
             "rating": r.rating,
             "review": r.review,
-            "reviewTimestamp": r.reviewtimestamp.isoformat(),
+            "reviewTimestamp": r.reviewtimestamp.isoformat() if r.reviewtimestamp else None,
             "personalBest": r.personalbest
         } for r in ratings])
     elif request.method == 'POST':
         data = request.get_json()
-        new_rating = Rating (
+        new_rating = Rating(
             gameid=data.get('gameID'),
             userid=data.get('userID'),
             rating=data.get('rating'),
