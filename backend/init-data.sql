@@ -16,19 +16,19 @@ the legendary hero from previous Resident Evil games, suddenly disrupts their li
 devastated Ethan into a new and twisted nightmare in search of answers.', '2021-05-07', false);
 
 UPDATE Games
-SET gamecoverurl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameCovers/Re7_xone_cover.jpg'
+SET gamecoverurl = 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Games/GameCovers/Re7_xone_cover.jpg'
 WHERE gameID = 1;
 
 UPDATE Games
-SET gamelogourl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameLogos/Resident_Evil_7_logo.jpg'
+SET gamelogourl = 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/The-Crimson-Archive/main/URLs/Games/GameLogos/Resident_Evil_7_logo.jpg'
 WHERE gameID = 1;
 
 UPDATE Games
-SET gamecoverurl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameCovers/Resident_Evil_Village_NA_Cover_29.jpg'
+SET gamecoverurl = 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Games/GameCovers/Resident_Evil_Village_NA_Cover_29.jpg'
 WHERE gameID = 2;
 
 UPDATE Games
-SET gamelogourl = 'https://raw.githubusercontent.com/sushisajid/URLs/Games/GameLogos/RESIDENT_EVIL_VILLAGE_logo.jpg'
+SET gamelogourl = 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Games/GameLogos/RESIDENT_EVIL_VILLAGE_logo.jpg'
 WHERE gameID = 2;
 
 -- platforms
@@ -73,7 +73,7 @@ father of rosemary winters. courageous, determined, and resourceful under extrem
 'todd soley', 'hidenobu kiuchi', 'yaya chamki', '');
 
 update ingamecharacters
-set spriteURL = 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/ethan_re7.webp'
+set spriteURL = 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/ethan_re7.webp'
 WHERE characterID = 1;
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
@@ -88,7 +88,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Mia Winters',
 'former operative for The Connections; caretaker of Eveline; wife of Ethan Winters and mother of Rosemary. presumed dead after the Annabelle incident, later recovered by the Baker family. captured and influenced by Eveline, attacks Ethan under her control, but eventually assists him in defeating Eveline. after the incident, enters witness protection in Europe with Ethan and their daughter.',
 'female, caucasian/american, born december 14, 1984; 170 cm (5''7"), 61 kg (134 lb). researcher for The Connections (2010 - 2014) and Eveline''s handler (2014). skilled in firearms and covert operations; protective, resourceful, and deeply committed to family.',
-'katie o''hagan', 'akari higuchi', 'N/A', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/mia_re7.webp');
+'katie o''hagan', 'akari higuchi', 'N/A', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/mia_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -102,7 +102,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('David Anderson',
 'african-american deputy sheriff assigned to patrol the dulvey bayou following a series of disappearances. investigates the baker house, encounters ethan winters, but is killed by jack baker early in the incident. his corpse becomes partially converted by mold and is used by lucas baker to manipulate ethan. his death is later covered up by the sheriff''s office and bsaa as a gas leak.',
 'male, african-american, born c.1986; 175 cm (5''9"), 60 kg (130 lb). deputy sheriff by occupation; dutiful but skeptical and inexperienced when confronted with biohazard threats.',
-'hari williams', 'minoru kawai', 'pierre dager', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/david_re7.png');
+'hari williams', 'minoru kawai', 'pierre dager', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/david_re7.png');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -116,7 +116,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Zoe Baker',
 'female from dulvey, louisiana; daughter of jack and marguerite baker, sister to lucas. involved in the dulvey incident as a captive resistant to eveline''s mind control. helps ethan winters navigate the baker estate, reattaches his hand, provides the genome codex, and guides him to cure her and mia. after being captured and partially calcified, she is rescued and quarantined, later gaining a new identity and working as a rookie reporter in new orleans while investigating the incident and the origins of eveline.',
 'female, caucasian/american, born c.1994; 170 cm (5''7"), 58 kg (130 lb). resilient, intelligent, resourceful; skilled at surviving in extreme circumstances and assisting others under duress.',
-'giselle gilbert', 'yu kobayashi', 'giselle gilbert', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/zoe_re7.webp');
+'giselle gilbert', 'yu kobayashi', 'giselle gilbert', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/zoe_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -130,7 +130,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Chris Redfield',
 'american special operations unit operator with bsaa; veteran bioweapon hunter. older brother of claire redfield, mentor to rosemary winters. in the dulvey incident (2017), he responds to blue umbrella''s request to apprehend lucas baker and contain the mold bioweapon. assists ethan winters and mia, eliminates mutant lucas baker, and later coordinates the rescue of zoe baker with her uncle joe.',
 'male, caucasian/american, born c.1973; height varies between 181 - 185 cm (5''11" - 6''1"), mass 80 - 100 kg (176 - 220 lb). blood type o. highly skilled marksman, tactician, and hand-to-hand combatant; specializes in biohazard containment and bioweapon neutralization.',
-'david vaughn', 'hiroki tōchi', 'david vaughn', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/chris_re7.webp');
+'david vaughn', 'hiroki tōchi', 'david vaughn', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/chris_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -144,7 +144,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Alan Droney',
 'special agent for the connections, assigned alongside mia winters to act as handler and parental figure for eveline. during transport on the ss annabelle, eveline''s mold infection overtakes the crew, including alan. after showing symptoms, he sends mia to subdue eveline, but eveline accelerates the mold inside him, killing him. he later appears in a group photo in miranda''s lab in resident evil village.',
 'male, caucasian/american, born c.1961, died october 5, 2014 (aged 53). height 180 cm (5''11"), mass 80 kg (180 lb).',
-'kip pardue', 'kyomitsu mizuuchi', 'mark hobart', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/alan_re7.webp');
+'kip pardue', 'kyomitsu mizuuchi', 'mark hobart', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/alan_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -158,7 +158,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Lucas Baker',
 'firstborn of jack and marguerite baker from dulvey, louisiana. infected by eveline''s mold, gains regenerative abilities and a sadistic streak, designing deadly puzzles to kill victims. acted as a researcher for the Connections syndicate, later betrays them and kills their scientists. mutates and is killed by chris redfield in the salt mines after attempting to sell eveline''s bioweapon data.',
 'male, caucasian/american, height 182 cm (6''0"), mass 68 kg (150 lb), deceased. family: jack baker (father), marguerite baker (mother), joe baker (uncle), zoe baker (sister).',
-'jesse pimentel', 'setsuji sato', 'jesse pimentel', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/lucas_re7.webp');
+'jesse pimentel', 'setsuji sato', 'jesse pimentel', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/lucas_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -172,7 +172,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Eveline',
 'codenamed e-001; genetically engineered human bioweapon created by the Connections. possesses mind-control powers, manipulates the baker family and mia winters, abducts humans including ethan winters, and attempts to coerce them into joining her “ideal family.” serves as the main antagonist of resident evil 7: biohazard.',
 'female, height 156 cm (5''1"), mass 45 kg, artificially aged to appear ten years old, deceased july 20, 2017 in dulvey parish, louisiana. first e-type bioweapon; merges with mold upon death.',
-'patricia mcneely', 'yuri tabata', 'N/A', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/eveline_re7.webp');
+'patricia mcneely', 'yuri tabata', 'N/A', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/eveline_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -186,7 +186,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Jack Baker',
 'infected baker family patriarch; after eveline''s arrival, gained enhanced strength, speed, and near-immortality. along with his family, kidnapped and killed victims to expand eveline''s "family" until his death at the hands of ethan winters.',
 'male, caucasian/american, height 190 cm (6''3"), mass 92 kg, deceased. member of the baker family in dulvey, louisiana.',
-'jack brand', 'kazuhiro yamaji', 'jack brand', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/joe_re7.webp');
+'jack brand', 'kazuhiro yamaji', 'jack brand', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/joe_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -200,7 +200,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Marguerite Baker',
 'infected baker family matriarch; gained ability to control mutant insects, enhanced strength and speed after eveline''s infection. captured victims with family and tried to assimilate ethan and mia winters into eveline''s "family"; ultimately killed by ethan after mutating into a monstrous form.',
 'female, caucasian/american, height 168 cm (5''6"), mass 70 kg, deceased. mother in the baker family of dulvey, louisiana.',
-'sara coates', 'maki izawa', 'sara coates', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/marguerite_re7.webp');
+'sara coates', 'maki izawa', 'sara coates', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/marguerite_re7.webp');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -214,7 +214,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Clancy Jarvis',
 'cameraman for paranormal series Sewer Gators; investigates dulvey haunted house, captured and killed by lucas baker during deadly puzzles.',
 'male, caucasian/american, born c.1982, died june 2, 2017; cameraman; deceased.',
-'Tony Vogel', 'Yu Seki', 'N/A', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/clancy_re7.png');
+'Tony Vogel', 'Yu Seki', 'N/A', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/clancy_re7.png');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -228,7 +228,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Peter Walken',
 'tv presenter for paranormal series Sewer Gators; investigates baker ranch with crew, killed by the bakers; death covered as natural gas accident.',
 'male, caucasian/american, born c.1974; tv presenter; deceased.',
-'Robert Vestal', 'N/A', 'N/A', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/peter_re7.png');
+'Robert Vestal', 'N/A', 'N/A', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/peter_re7.png');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -242,7 +242,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Andre Stickland',
 'producer and showrunner of Sewer Gators; captured and murdered by jack baker during investigation of baker ranch; death covered as natural gas accident.',
 'male, caucasian/american, born 1981; tv producer; deceased.',
-'Christopher Ashman', 'N/A', 'N/A', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/andre_re7.png');
+'Christopher Ashman', 'N/A', 'N/A', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/andre_re7.png');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -256,7 +256,7 @@ insert into InGameCharacters (characterName, backstory, description, englishVA, 
 ('Hoffman',
 'civilian victim captured by lucas baker; forced to participate in lucas'' deadly card game "21", endured electrocution and saw attacks, resulting in death.',
 'male, caucasian/american, died june 2017; baker ranch, dulvey parish, louisiana; deceased.',
-'N/A', 'N/A', 'N/A', 'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/hoffman_re7.png');
+'N/A', 'N/A', 'N/A', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/hoffman_re7.png');
 
 insert into Appearances (gameID, characterID, firstAppearance, isPlayable, notes) VALUES (
     1,
@@ -293,62 +293,62 @@ insert into Games_Characters (gameID, characterID) values
 
 -- guest house maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Guest House', '1F', 'first floor of the guest house in the baker estate, includes main living area, dining, and hallway.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_1f.png'),
-(1, 'Guest House', '2F', 'second floor of the guest house, includes bedrooms and bathroom.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_2f.png'),
-(1, 'Guest House', '3F', 'third floor of the guest house, attic storage and additional rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_3f.png'),
-(1, 'Guest House', 'B1', 'basement of the guest house, storage and access to hidden areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ghouse_b1.png');
+(1, 'Guest House', '1F', 'first floor of the guest house in the baker estate, includes main living area, dining, and hallway.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ghouse_1f.png'),
+(1, 'Guest House', '2F', 'second floor of the guest house, includes bedrooms and bathroom.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ghouse_2f.png'),
+(1, 'Guest House', '3F', 'third floor of the guest house, attic storage and additional rooms.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ghouse_3f.png'),
+(1, 'Guest House', 'B1', 'basement of the guest house, storage and access to hidden areas.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ghouse_b1.png');
 
 -- main house maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Main House', '1F', 'first floor of the main house, includes kitchen, living room, and foyer.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_1f.png'),
-(1, 'Main House', '2F', 'second floor of the main house, bedrooms and study areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_2f.png'),
-(1, 'Main House', 'Attic', 'attic of the main house, storage area with hidden secrets.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_attic.png'),
-(1, 'Main House', 'Processing Area', 'processing area of the main house, contains Eveline containment and lab equipment.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/mhouse_processingArea.png');
+(1, 'Main House', '1F', 'first floor of the main house, includes kitchen, living room, and foyer.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/mhouse_1f.png'),
+(1, 'Main House', '2F', 'second floor of the main house, bedrooms and study areas.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/mhouse_2f.png'),
+(1, 'Main House', 'Attic', 'attic of the main house, storage area with hidden secrets.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/mhouse_attic.png'),
+(1, 'Main House', 'Processing Area', 'processing area of the main house, contains Eveline containment and lab equipment.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/mhouse_processingArea.png');
 
 -- yard maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Yard', NULL, 'outdoor area of the baker estate connecting multiple buildings, includes trailer and path to old house.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/yard.png');
+(1, 'Yard', NULL, 'outdoor area of the baker estate connecting multiple buildings, includes trailer and path to old house.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/yard.png');
 
 -- old house maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Old House', '1F', 'first floor of the old house, includes kitchen, cellar, and dining area.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_1f.png'),
-(1, 'Old House', '2F', 'second floor of the old house, bedrooms and storage areas.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_2f.png'),
-(1, 'Old House', '1F (WEST)', 'western first-floor section of the old house, includes altar access and crawl spaces.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_1f_west.png'),
-(1, 'Old House', '2F (WEST)', 'western second-floor area of the old house, connected to secret passages.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ohouse_2f_west.png');
+(1, 'Old House', '1F', 'first floor of the old house, includes kitchen, cellar, and dining area.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ohouse_1f.png'),
+(1, 'Old House', '2F', 'second floor of the old house, bedrooms and storage areas.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ohouse_2f.png'),
+(1, 'Old House', '1F (WEST)', 'western first-floor section of the old house, includes altar access and crawl spaces.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ohouse_1f_west.png'),
+(1, 'Old House', '2F (WEST)', 'western second-floor area of the old house, connected to secret passages.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ohouse_2f_west.png');
 
 -- testing area maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Testing Area', '1F', 'first floor of the testing area, contains traps, puzzle rooms, and control rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/testingarea_1f.png'),
-(1, 'Testing Area', '2F', 'second floor of the testing area, includes barn arena and combat zones.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/testingarea_2f.png');
+(1, 'Testing Area', '1F', 'first floor of the testing area, contains traps, puzzle rooms, and control rooms.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/testingarea_1f.png'),
+(1, 'Testing Area', '2F', 'second floor of the testing area, includes barn arena and combat zones.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/testingarea_2f.png');
 
 -- boat house maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Boat House', '1F', 'first floor of the boat house, dock and access to swamp.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/boathouse_1f.png'),
-(1, 'Boat House', '1F (STORAGE)', 'storage section of the first floor of the boat house.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/boathouse_storage_1f.png'),
-(1, 'Boat House', '2F (STORAGE)', 'storage upper level with access to machinery and balcony.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/boathouse_storage_2f.png');
+(1, 'Boat House', '1F', 'first floor of the boat house, dock and access to swamp.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/boathouse_1f.png'),
+(1, 'Boat House', '1F (STORAGE)', 'storage section of the first floor of the boat house.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/boathouse_storage_1f.png'),
+(1, 'Boat House', '2F (STORAGE)', 'storage upper level with access to machinery and balcony.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/boathouse_storage_2f.png');
 
 -- wrecked ship maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Wrecked Ship', 'S3', 'third submerged level of the wrecked ship, flooded corridors and cargo.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_s3.png'),
-(1, 'Wrecked Ship', 'S2', 'second submerged level of the wrecked ship, engine room and crew storage.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_s2.png'),
-(1, 'Wrecked Ship', 'S1', 'first submerged level of the wrecked ship, maintenance access and labs.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_s1.png'),
-(1, 'Wrecked Ship', '1F', 'first floor of the wrecked ship, main hall and control rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_1f.png'),
-(1, 'Wrecked Ship', '2F', 'second floor of the wrecked ship, sleeping quarters and cafeteria.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_2f.png'),
-(1, 'Wrecked Ship', '3F', 'third floor of the wrecked ship, command deck and captain''s cabin.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_3f.png'),
-(1, 'Wrecked Ship', '4F', 'fourth floor of the wrecked ship, radio tower and escape point.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/wrecked_ship_4f.png');
+(1, 'Wrecked Ship', 'S3', 'third submerged level of the wrecked ship, flooded corridors and cargo.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/wrecked_ship_s3.png'),
+(1, 'Wrecked Ship', 'S2', 'second submerged level of the wrecked ship, engine room and crew storage.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/wrecked_ship_s2.png'),
+(1, 'Wrecked Ship', 'S1', 'first submerged level of the wrecked ship, maintenance access and labs.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/wrecked_ship_s1.png'),
+(1, 'Wrecked Ship', '1F', 'first floor of the wrecked ship, main hall and control rooms.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/wrecked_ship_1f.png'),
+(1, 'Wrecked Ship', '2F', 'second floor of the wrecked ship, sleeping quarters and cafeteria.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/wrecked_ship_2f.png'),
+(1, 'Wrecked Ship', '3F', 'third floor of the wrecked ship, command deck and captain''s cabin.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/wrecked_ship_3f.png'),
+(1, 'Wrecked Ship', '4F', 'fourth floor of the wrecked ship, radio tower and escape point.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/wrecked_ship_4f.png');
 
 -- ship maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Ship', '2F', 'second floor of the tanker ship, crew rooms and hallways.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ship_2f.png'),
-(1, 'Ship', 'S2', 'second submerged level of the ship, engine pumps and storage.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ship_s2.png'),
-(1, 'Ship', '3F', 'third floor of the ship, communications and weapons storage.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/ship_3f.png');
+(1, 'Ship', '2F', 'second floor of the tanker ship, crew rooms and hallways.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ship_2f.png'),
+(1, 'Ship', 'S2', 'second submerged level of the ship, engine pumps and storage.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ship_s2.png'),
+(1, 'Ship', '3F', 'third floor of the ship, communications and weapons storage.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/ship_3f.png');
 
 -- salt mine maps
 insert into Maps (gameID, mapName, floorName, description, mapURL) values
-(1, 'Salt Mine', 'Swamp', 'entrance area of the salt mine connected through the swamp region.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/swamp.png'),
-(1, 'Salt Mine', 'B3', 'third basement level of the salt mine, mining tunnels and control rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b3.png'),
-(1, 'Salt Mine', 'B2', 'second basement level of the salt mine, experimentation chambers and cargo zones.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b2.png'),
-(1, 'Salt Mine', 'B1', 'first basement level of the salt mine, access to final confrontation rooms.', 'https://raw.githubusercontent.com/sushisajid/URLs/Maps/salt_mine_b1.png');
+(1, 'Salt Mine', 'Swamp', 'entrance area of the salt mine connected through the swamp region.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/swamp.png'),
+(1, 'Salt Mine', 'B3', 'third basement level of the salt mine, mining tunnels and control rooms.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/salt_mine_b3.png'),
+(1, 'Salt Mine', 'B2', 'second basement level of the salt mine, experimentation chambers and cargo zones.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/salt_mine_b2.png'),
+(1, 'Salt Mine', 'B1', 'first basement level of the salt mine, access to final confrontation rooms.', 'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Maps/salt_mine_b1.png');
 
 -- mobs
 -- standard molded
@@ -356,7 +356,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Molded', 'standard',
 'tall, flexible humanoid bioweapons fully warped by black mold fungus. bodies are veiny, skeletal structures barely visible under the fungal mass. heads melted into a huge gaping mouth full of spike-like teeth. claws extend from arms, allowing slashing and long-range thrust attacks. animalistic but intelligent enough to track prey, hunt in groups, crawl through vents, and ambush from mold-covered environments. extremely durable exterior mold holds the body together — when pushed past its durability limit, the internal organs burst into sludge.',
 'general damage to the mold exterior — shredding the outer mold structure causes the internal organs to collapse instantly. arms and legs can be destroyed to cripple them. white molded/fumers are immune to normal bullets, explosives, and fire — weakness is anti-regen ramrod ammo only.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/molded_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/molded_re7.webp',
 'created when corpses are consumed by mold through exposure to an E-Type subject; spawn throughout mold-rich environments. despawn when entering safe rooms, may respawn upon exit.');
 
 -- blade molded
@@ -364,7 +364,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Blade Molded', 'standard',
 'mutated molded variant with right arm transformed into massive cluster of organic spiked blades. shields head and strikes at long range. movement, intelligence, and aggression match regular molded but faster and relentless when crawling.',
 'headshots still work, require more firepower due to shield and higher health. shotgun blast to head can one-shot. crippling legs increases aggression.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/blade_molded_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/blade_molded_re7.webp',
 'first encountered in processing area (normal), old house (madhouse). natural evolution of molded infection; rarer than regular molded.');
 
 -- quick molded
@@ -372,7 +372,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Quick Molded', 'standard',
 'lean, smaller molded variant, runs and fights on all fours with extra-long limbs for speed and agility. cannot bite; offense from claw strikes.',
 'low durability — 2 - 3 handgun headshots or 1 shotgun blast. speed makes landing hits difficult. crouching improves aim.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/quick_molded_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/quick_molded_re7.webp',
 'appears after Marguerite''s defeat en route to dissection room. Madhouse versions appear earlier; faster and more aggressive.');
 
 -- fat molded
@@ -380,7 +380,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Fat Molded', 'standard',
 'massive, bloated molded variant powered by corrosive bile. extremely slow, durable, vomit-based ranged attacks, grabs, charges, explodes on death.',
 'shotgun to legs slows it; remote bombs in mouth = instant kill; keep distance and use cover.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/fat_molded_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/fat_molded_re7.webp',
 'first major encounter in barn; appears later in other locations including Mia''s sections. death explosion requires spacing.');
 
 -- man-eating spider
@@ -388,7 +388,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Man-Eating Spider', 'standard',
 'colonies of mold-generated spider imitations that nest on doors, cabinets, chokepoints. hyper-aggressive jump attackers with strong fangs; behave like living locks.',
 'very low hp; knife and burner kill instantly. must eliminate full cluster to open blocked paths.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/spider_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/spider_re7.webp',
 'found only in Old House before Marguerite. spawn in groups; despawn permanently after area completion.');
 
 -- insect hive
@@ -396,7 +396,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Insect Hive', 'standard',
 'stationary mold-grown hives that release swarms of man-eating insects when disturbed. danger is in swarms and blocking progression.',
 'fire deletes them (burner/grenade), shotguns effective but insects may body-block. destroying small hives during Marguerite fight stops additional swarms.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/hive_re7.jpg',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/hive_re7.jpg',
 'first appear in Old House; one must be destroyed to reach Cellar. additional hives spawn dynamically during Marguerite fight.');
 
 -- boss: Mia Winters (infected)
@@ -404,7 +404,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Mia Winters (Infected)', 'boss',
 'violent corrupted puppet of Eveline, flips between loving wife and rabid bio-weapon. superhuman strength, speed, and resistance to pain.',
 'standard weapons stagger; openings during post-rage cooldowns; melee works first encounter; chainsaw phase requires distance and shots.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/mia_infected_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/mia_infected_re7.webp',
 'triggered after Ethan leaves Mia alone in guest house. includes stair ambush, wall throw + axe, attic power return → chainsaw phase. ends when defeated, mutters "I love you".');
 
 -- boss: Jack Baker (infected)
@@ -412,7 +412,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Jack Baker (Infected)', 'boss',
 'heavily mutated Jack Baker, reptilian mass of molded flesh with multiple eyes. extremely strong, highly aggressive, can throw player.',
 'destroying eyes deals high damage and staggers; cannot be killed normally; only serum works.',
-'https://raw.githubusercontent.com/sushisajid/URLs/InGameCharacters/jack_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/InGameCharacters/jack_re7.webp',
 'appears in boathouse during escape with Mia and Zoe. fight ends when immobilized and injected with serum.');
 
 -- boss: Marguerite Baker (infected)
@@ -420,7 +420,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Marguerite Baker (Infected)', 'boss',
 'fully mutated by Eveline, elongated limbs, demonic eyes, crawls along walls. abdomen is insect hive releasing swarms. fast, strong, highly aggressive.',
 'primary weak point is abdomen hive; vulnerable to fire and concentrated attacks on limbs/abdomen; high-damage weapons recommended.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/marguerite_infected_re7.webp',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/marguerite_infected_re7.webp',
 'appears in greenhouse for final confrontation; stalks Ethan in Old House. fight triggers automatically with lantern.');
 
 -- boss: Eveline
@@ -428,7 +428,7 @@ insert into Mobs (gameID, mobName, mobType, description, weakness, mobSpriteURL,
 (1, 'Eveline', 'boss',
 'bioweapon child with mold-based powers, capable of hallucinations, telekinesis, and mind control. can manipulate mold, summon minions, attack from distance. transforms into massive mold monstrosity when weakened.',
 'e-necrotoxin incapacitates powers and triggers physical target form; heavy firepower, explosives, ramrods effective on limbs/weak points.',
-'https://raw.githubusercontent.com/sushisajid/URLs/Mobs/eviler_eveline_re7.png',
+'https://raw.githubusercontent.com/sushisajid/The-Crimson-Archive/main/URLs/Mobs/eviler_eveline_re7.png',
 'appears in guest house attic for final confrontation; appears earlier as hallucinations, mold constructs, minions; creates environmental and mental hazards.');
 
 select * from Mobs;
@@ -1070,12 +1070,6 @@ select 1, contributorID, roleID from Contributors, Roles where Contributors.cont
 
 insert into Games_Contributors (gameID, contributorID, roleID)
 select 1, contributorID, roleID from Contributors, Roles where Contributors.contributorName = 'Yoshizumi Hori' and Roles.roleName = 'Senior Project Manager';
-
--- debugging URLs
-
-UPDATE games
-SET gameCoverURL = 'https://i.pinimg.com/736x/d3/e3/38/d3e338faf4d8a18b43a949f63d317c73.jpg'
-WHERE gameID = 1;
 
 -- reviewing data
 
