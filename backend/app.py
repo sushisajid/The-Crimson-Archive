@@ -56,8 +56,9 @@ def handle_users():
         return jsonify([{
             "userID": u.userid,
             "username": u.username,
+            "email": u.email,
             "displayName": u.displayname,
-            "userType": u.usertype,
+            "isDev": u.isdev,
             "accountCreationDate": u.accountcreationdate.isoformat()
         } for u in users])
 

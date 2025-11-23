@@ -24,9 +24,10 @@ class User(db.Model):
 
     userid = db.Column('userid', db.Integer, primary_key=True)
     username = db.Column('username', db.String(100), unique=True, nullable=False)
+    email = db.Column('email', db.String(255), unique=True, nullable=False)
     displayname = db.Column('displayname', db.String(100))
     passwordhash = db.Column('passwordhash', db.String(255), nullable=False)
-    usertype = db.Column('usertype', db.String(25))  # developer / casual browser
+    isdev = db.Column('isdev', db.Boolean, nullable=False)
     accountcreationdate = db.Column('accountcreationdate', db.DateTime, default=datetime.utcnow)
 
     ratings = db.relationship('Rating', backref='user', cascade="all, delete-orphan")
