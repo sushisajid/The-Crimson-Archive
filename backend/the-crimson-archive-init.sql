@@ -22,9 +22,10 @@ create table Games (
 create table Users(
 	userID serial primary key,
 	username varchar(100) unique not null,
+	email varchar(255) unique not null,
 	displayName varchar(100),
 	passwordHash varchar(255) not null,
-	userType varchar(25), -- developer / casual browser
+	isDev boolean not null, -- is the user a developer / casual fan?
 	accountCreationDate timestamp default now()
 );
 

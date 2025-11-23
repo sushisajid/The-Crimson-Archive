@@ -1074,6 +1074,7 @@ select 1, contributorID, roleID from Contributors, Roles where Contributors.cont
 -- reviewing data
 
 select * from games;
+select * from users;
 select * from platforms;
 select * from games_platforms;
 select * from ingamecharacters;
