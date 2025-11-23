@@ -2,13 +2,15 @@ import subprocess
 import os
 import shutil
 
+python_path = r"C:\Python313\python.exe"
+
 # start Flask
 flask_env = os.environ.copy()
 flask_env["FLASK_APP"] = "backend/app.py"
 flask_env["FLASK_ENV"] = "development"
 
 flask_process = subprocess.Popen(
-    ["flask", "run"], env=flask_env
+    [python_path, "-m", "flask", "run"], env=flask_env
 )
 
 npm_path = shutil.which("npm")
