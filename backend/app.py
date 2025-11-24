@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
-from models import db, User, Platform, Game, InGameCharacter, Map, Mob, StoryArc, Role, Contributor, Clip, Rating
+from models import db, User, Platform, Game, InGameCharacter, Map, Mob, StoryArc, Role, Contributor, Clip, Rating, GamesPlatform, GamesCharacter, Appearance, MobMap, GamesContributor
 from flask_cors import CORS
 from sqlalchemy import event
 from sqlalchemy.engine import Engine
@@ -243,28 +243,6 @@ def handle_contributors():
         db.session.commit()
         return jsonify({"message": "Contributor added", "contributorID": new_contrib.contributorid}), 201
 
-# -------- GAMES_CONTRIBUTORS --------
-@app.route('/games_contributors', methods=['GET', 'POST'])
-def handle_games_contributors():
-    if request.method == 'GET':
-        gcs = Contributor.query.all()
-        return jsonify([{
-            "gcID": gc.gcid,
-            "gameID": gc.gameid,
-            "contributorID": gc.contributorid,
-            "roleID": gc.roleid
-        } for gc in gcs])
-    elif request.method == 'POST':
-        data = request.get_json()
-        new_gc = Contributor(
-            gameid=data.get('gameID'),
-            contributorid=data.get('contributorID'),
-            roleid=data.get('roleID')
-        )
-        db.session.add(new_gc)
-        db.session.commit()
-        return jsonify({"message": "Games_Contributor added", "gcID": new_gc.gcid}), 201
-
 # -------- CLIPS --------
 @app.route('/clips', methods=['GET', 'POST'])
 def handle_clips():
@@ -315,6 +293,151 @@ def handle_ratings():
         db.session.add(new_rating)
         db.session.commit()
         return jsonify({"message": "Rating added", "ratingID": new_rating.ratingid}), 201
+
+# -------- JUNCTION DATA --------
+
+# games ↔ platforms
+@app.route('/GamesPlatform', methods=['POST'])
+def add_game_platform():
+    data = request.get_json()
+    new_row = GamesPlatform (
+        gameid=data.get('gameID'),
+        platformid=data.get('platformID')
+    )
+    db.session.add(new_row)
+    db.session.commit()
+    return jsonify({"message": "relation added", "id": new_row.gameplatformid}), 201
+
+@app.route('/games/<int:game_id>/platforms', methods=['GET'])
+def get_platforms_for_game(game_id):
+    results = db.session.query(Platform).join(GamesPlatform).filter(GamesPlatform.gameid == game_id).all()
+    return jsonify([p.to_dict() for p in results]), 200
+
+@app.route('/platforms/<int:platform_id>/games', methods=['GET'])
+def get_games_for_platform(platform_id):
+    results = db.session.query(Game).join(GamesPlatform).filter(GamesPlatform.platformid == platform_id).all()
+    return jsonify([g.to_dict() for g in results]), 200
+
+# games ↔ characters
+@app.route('/GamesCharacters', methods=['POST'])
+def add_game_character():
+    data = request.get_json()
+    new_row = GamesCharacter (
+        gameid=data.get('gameID'),
+        characterid=data.get('characterID')
+    )
+    db.session.add(new_row)
+    db.session.commit()
+    return jsonify({"message": "relation added", "id": new_row.gamecharid}), 201
+
+@app.route('/games/<int:game_id>/characters', methods=['GET'])
+def get_characters_for_game(game_id):
+    results = db.session.query(InGameCharacter).join(GamesCharacter).filter(GamesCharacter.gameid == game_id).all()
+    return jsonify([c.to_dict() for c in results]), 200
+
+@app.route('/characters/<int:character_id>/games', methods=['GET'])
+def get_games_for_character(character_id):
+    results = db.session.query(Game).join(GamesCharacter).filter(GamesCharacter.characterid == character_id).all()
+    return jsonify([g.to_dict() for g in results]), 200
+
+# appearance (special version of game-character)
+@app.route('/appearances', methods=['POST'])
+def add_appearance():
+    data = request.get_json()
+    new_row = Appearance (
+        gameid=data.get('gameID'),
+        characterid=data.get('characterID'),
+        firstappearance=data.get('firstAppearance', False),
+        isplayable=data.get('isPlayable', False),
+        notes=data.get('notes')
+    )
+    db.session.add(new_row)
+    db.session.commit()
+    return jsonify({"message": "appearance added", "id": new_row.appearanceid}), 201
+
+@app.route('/games/<int:game_id>/Appearance', methods=['GET'])
+def get_Appearance_for_game(game_id):
+    results = db.session.query(Appearance, InGameCharacter).join(InGameCharacter).filter(Appearance.gameid == game_id).all()
+    data = []
+    for appearance, character in results:
+        item = appearance.to_dict()
+        item["character"] = character.to_dict()
+        data.append(item)
+    return jsonify(data), 200
+
+@app.route('/characters/<int:character_id>/Appearance', methods=['GET'])
+def get_Appearance_for_character(character_id):
+    results = db.session.query(Appearance, Game).join(Game).filter(Appearance.characterid == character_id).all()
+    data = []
+    for appearance, game in results:
+        item = appearance.to_dict()
+        item["game"] = game.to_dict()
+        data.append(item)
+    return jsonify(data), 200
+
+# mobs ↔ maps
+@app.route('/mobmaps', methods=['POST'])
+def add_mob_map():
+    data = request.get_json()
+    new_row = MobMap (
+        mobid=data.get('mobID'),
+        mapid=data.get('mapID')
+    )
+    db.session.add(new_row)
+    db.session.commit()
+    return jsonify({"message": "relation added", "id": new_row.mmid}), 201
+
+@app.route('/maps/<int:map_id>/mobs', methods=['GET'])
+def get_mobs_for_map(map_id):
+    results = db.session.query(Mob).join(MobMap).filter(MobMap.mapid == map_id).all()
+    return jsonify([m.to_dict() for m in results]), 200
+
+@app.route('/mobs/<int:mob_id>/maps', methods=['GET'])
+def get_maps_for_mob(mob_id):
+    results = db.session.query(Map).join(MobMap).filter(MobMap.mobid == mob_id).all()
+    return jsonify([m.to_dict() for m in results]), 200
+
+# games ↔ contributors ↔ roles
+@app.route('/gamescontributors', methods=['POST'])
+def add_game_contributor():
+    data = request.get_json()
+    new_row = GamesContributor (
+        gameid=data.get('gameID'),
+        contributorid=data.get('contributorID'),
+        roleid=data.get('roleID')
+    )
+    db.session.add(new_row)
+    db.session.commit()
+    return jsonify({"message": "contributor added to game", "id": new_row.gcid}), 201
+
+@app.route('/games/<int:game_id>/contributors', methods=['GET'])
+def get_contributors_for_game(game_id):
+    results = db.session.query(GamesContributor, Contributor, Role) \
+        .join(Contributor, GamesContributor.contributorid == Contributor.contributorid) \
+        .join(Role, GamesContributor.roleid == Role.roleid) \
+        .filter(GamesContributor.gameid == game_id).all()
+
+    data = []
+    for gc, contributor, role in results:
+        item = gc.to_dict()
+        item["contributor"] = contributor.to_dict()
+        item["role"] = role.to_dict()
+        data.append(item)
+    return jsonify(data), 200@app.route('/contributors/<int:contributor_id>/games', methods=['GET'])
+def get_games_for_contributor(contributor_id):
+    results = db.session.query(GamesContributor, Game, Role) \
+        .join(Game, GamesContributor.gameid == Game.gameid) \
+        .join(Role, GamesContributor.roleid == Role.roleid) \
+        .filter(GamesContributor.contributorid == contributor_id).all()
+
+    data = []
+    for gc, game, role in results:
+        item = gc.to_dict()
+        item["game"] = game.to_dict()
+        item["role"] = role.to_dict()
+        data.append(item)
+    return jsonify(data), 200
+
 
 if __name__ == "__main__":
     app.run(debug=True)
