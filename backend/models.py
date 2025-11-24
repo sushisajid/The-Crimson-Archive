@@ -16,8 +16,13 @@ class Game(db.Model):
     plotsummary = db.Column('plotsummary', db.Text)
     releasedate = db.Column('releasedate', db.Date, nullable=False)
     multiplayersupport = db.Column('multiplayersupport', db.Boolean, nullable=False)
+    
+    # Utility method to convert model instance to dictionary
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- users -------------------
+
 class User(db.Model):
     __tablename__ = 'users'
     __table_args__ = {'schema': 'crimson'}
@@ -31,9 +36,12 @@ class User(db.Model):
     accountcreationdate = db.Column('accountcreationdate', db.DateTime, default=datetime.utcnow)
 
     ratings = db.relationship('Rating', backref='user', cascade="all, delete-orphan")
-
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- platforms -------------------
+
 class Platform(db.Model):
     __tablename__ = 'platforms'
     __table_args__ = {'schema': 'crimson'}
@@ -42,18 +50,23 @@ class Platform(db.Model):
     platformname = db.Column('platformname', db.String(50), unique=True, nullable=False)
 
     games = db.relationship('GamesPlatforms', backref='platform', cascade="all, delete-orphan")
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
-
-class GamesPlatforms(db.Model):
+class GamesPlatform(db.Model):
     __tablename__ = 'games_platforms'
     __table_args__ = {'schema': 'crimson'}
 
     gameplatformid = db.Column('gameplatformid', db.Integer, primary_key=True)
     gameid = db.Column('gameid', db.Integer, db.ForeignKey('crimson.games.gameid', ondelete='CASCADE'), nullable=False)
     platformid = db.Column('platformid', db.Integer, db.ForeignKey('crimson.platforms.platformid', ondelete='CASCADE'), nullable=False)
-
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- characters -------------------
+
 class InGameCharacter(db.Model):
     __tablename__ = 'ingamecharacters'
     __table_args__ = {'schema': 'crimson'}
@@ -69,16 +82,20 @@ class InGameCharacter(db.Model):
 
     appearances = db.relationship('Appearance', backref='character', cascade="all, delete-orphan")
     games = db.relationship('GamesCharacters', backref='character', cascade="all, delete-orphan")
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
-
-class GamesCharacters(db.Model):
+class GamesCharacter(db.Model):
     __tablename__ = 'games_characters'
     __table_args__ = {'schema': 'crimson'}
 
     gamecharid = db.Column('gamecharid', db.Integer, primary_key=True)
     gameid = db.Column('gameid', db.Integer, db.ForeignKey('crimson.games.gameid', ondelete='CASCADE'), nullable=False)
     characterid = db.Column('characterid', db.Integer, db.ForeignKey('crimson.ingamecharacters.characterid', ondelete='CASCADE'), nullable=False)
-
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- appearances -------------------
 class Appearance(db.Model):
@@ -92,8 +109,11 @@ class Appearance(db.Model):
     isplayable = db.Column('isplayable', db.Boolean, default=False)
     notes = db.Column('notes', db.Text, nullable=False)
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- maps / mobs -------------------
+
 class Map(db.Model):
     __tablename__ = 'maps'
     __table_args__ = (db.UniqueConstraint('mapid', 'mapname', 'floorname'), {'schema': 'crimson'})
@@ -107,6 +127,8 @@ class Map(db.Model):
 
     mobs = db.relationship('MobMaps', backref='map', cascade="all, delete-orphan")
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 class Mob(db.Model):
     __tablename__ = 'mobs'
@@ -123,17 +145,23 @@ class Mob(db.Model):
 
     maps = db.relationship('MobMaps', backref='mob', cascade="all, delete-orphan")
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
-class MobMaps(db.Model):
+
+class MobMap(db.Model):
     __tablename__ = 'mob_maps'
     __table_args__ = {'schema': 'crimson'}
 
     mmid = db.Column('mmid', db.Integer, primary_key=True)
     mobid = db.Column('mobid', db.Integer, db.ForeignKey('crimson.mobs.mobid', ondelete='CASCADE'), nullable=False)
     mapid = db.Column('mapid', db.Integer, db.ForeignKey('crimson.maps.mapid', ondelete='CASCADE'), nullable=False)
-
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- story arcs -------------------
+
 class StoryArc(db.Model):
     __tablename__ = 'storyarcs'
     __table_args__ = {'schema': 'crimson'}
@@ -147,8 +175,11 @@ class StoryArc(db.Model):
     description = db.Column('description', db.Text, nullable=False)
     ismainarc = db.Column('ismainarc', db.Boolean, nullable=False)
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- roles / contributors -------------------
+
 class Role(db.Model):
     __tablename__ = 'roles'
     __table_args__ = {'schema': 'crimson'}
@@ -158,6 +189,8 @@ class Role(db.Model):
 
     contributors = db.relationship('GamesContributors', backref='role', cascade="all, delete-orphan")
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 class Contributor(db.Model):
     __tablename__ = 'contributors'
@@ -169,8 +202,10 @@ class Contributor(db.Model):
 
     games = db.relationship('GamesContributors', backref='contributor', cascade="all, delete-orphan")
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
-class GamesContributors(db.Model):
+class GamesContributor(db.Model):
     __tablename__ = 'games_contributors'
     __table_args__ = (db.UniqueConstraint('gameid', 'contributorid', 'roleid'), {'schema': 'crimson'})
 
@@ -179,8 +214,11 @@ class GamesContributors(db.Model):
     contributorid = db.Column('contributorid', db.Integer, db.ForeignKey('crimson.contributors.contributorid', ondelete='CASCADE'), nullable=False)
     roleid = db.Column('roleid', db.Integer, db.ForeignKey('crimson.roles.roleid', ondelete='CASCADE'), nullable=False)
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- clips -------------------
+
 class Clip(db.Model):
     __tablename__ = 'clips'
     __table_args__ = {'schema': 'crimson'}
@@ -190,9 +228,12 @@ class Clip(db.Model):
     cliptitle = db.Column('cliptitle', db.String(100), nullable=False)
     clipurl = db.Column('clipurl', db.String(2083), nullable=False)
     mediatype = db.Column('mediatype', db.String(50))
-
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 # ------------------- ratings -------------------
+
 class Rating(db.Model):
     __tablename__ = 'ratings'
     __table_args__ = (db.UniqueConstraint('gameid', 'userid'), {'schema': 'crimson'})
@@ -204,3 +245,6 @@ class Rating(db.Model):
     review = db.Column('review', db.Text)
     reviewtimestamp = db.Column('reviewtimestamp', db.DateTime, default=datetime.utcnow)
     personalbest = db.Column('personalbest', db.String(5))
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
